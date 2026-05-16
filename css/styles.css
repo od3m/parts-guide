@@ -1,5 +1,5 @@
 /* ============================================================
-   Cute Flexi Maker — Parts Guide
+   Druckpunkt — Parts Guide
    Stylesheet (organized in clearly labelled sections)
    ============================================================ */
 
@@ -8,19 +8,19 @@
    1. Design tokens
    ---------------------------------------------------------- */
 :root {
-    /* Colors */
-    --color-bg: #f5ecdc;
+    /* Colors — Druckpunkt brand */
+    --color-bg: #f5f5f7;
     --color-surface: #ffffff;
-    --color-surface-alt: #ede2cc;
-    --color-text: #2a2118;
-    --color-text-muted: #6a5a48;
-    --color-accent: #d97e3a;
-    --color-accent-dark: #b15a1f;
-    --color-shadow: rgba(70, 45, 20, 0.12);
+    --color-surface-alt: #f5f5f7;
+    --color-text: #1a1a2e;
+    --color-text-muted: #8e8e9a;
+    --color-accent: #e94560;
+    --color-accent-dark: #2d2d44;
+    --color-shadow: rgba(26, 26, 46, 0.12);
 
-    /* Typography */
-    --font-display: "Bowlby One", "Bungee", system-ui, -apple-system, sans-serif;
-    --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    /* Typography — Druckpunkt brand */
+    --font-display: "Outfit", "Helvetica Neue", Arial, sans-serif;
+    --font-body: "DM Sans", "Helvetica Neue", Arial, sans-serif;
 
     /* Spacing */
     --space-1: 0.5rem;
@@ -39,23 +39,6 @@
     --header-height: 68px;
 }
 
-@font-face {
-    font-family: "Bowlby One";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local("Bowlby One"),
-         url("https://fonts.gstatic.com/s/bowlbyone/v23/taiPGmVuC4y96PFeqp8sqomI_OE.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Borsok";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url("../borsok-font/boorsok.ttf") format("truetype"),
-         url("../borsok-font/boorsok.otf") format("opentype");
-}
 
 
 /* ----------------------------------------------------------
@@ -78,7 +61,7 @@ body {
     color: var(--color-text);
     font-family: var(--font-body);
     font-size: 16px;
-    line-height: 1.55;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -96,7 +79,7 @@ h1, h2, h3 {
 }
 
 a {
-    color: var(--color-accent-dark);
+    color: var(--color-text);
     text-decoration: none;
 }
 
@@ -171,7 +154,7 @@ a:focus-visible {
 
 .btn--ghost:hover,
 .btn--ghost:focus-visible {
-    background: var(--color-text);
+    background: var(--color-accent-dark);
     color: #fff;
     text-decoration: none;
 }
@@ -189,10 +172,10 @@ a:focus-visible {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(245, 236, 220, 0.95);
+    background: rgba(26, 26, 46, 0.97);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(70, 45, 20, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .site-header__inner {
@@ -209,7 +192,7 @@ a:focus-visible {
 .site-header__brand {
     display: flex;
     flex-direction: column;
-    color: var(--color-text);
+    color: #ffffff;
 }
 
 .site-header__brand:hover {
@@ -219,7 +202,12 @@ a:focus-visible {
 .site-header__title {
     font-family: var(--font-display);
     font-size: 1.15rem;
-    letter-spacing: 0.5px;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.brand-punkt {
+    color: #e94560;
 }
 
 .site-header__subtitle {
@@ -234,13 +222,13 @@ a:focus-visible {
 }
 
 .site-header__nav a {
-    color: var(--color-text);
+    color: #ffffff;
     font-weight: 500;
     font-size: 0.95rem;
 }
 
 .site-header__nav a.is-active {
-    color: var(--color-accent-dark);
+    color: var(--color-accent);
 }
 
 .site-header__nav a.btn {
@@ -252,7 +240,7 @@ a:focus-visible {
     align-items: center;
     gap: 0.4rem;
     font-size: 0.85rem;
-    color: var(--color-text-muted);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .lang-picker-wrap__label {
@@ -262,15 +250,15 @@ a:focus-visible {
 .lang-picker {
     appearance: none;
     -webkit-appearance: none;
-    background: var(--color-surface);
-    border: 1px solid rgba(70, 45, 20, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: var(--radius-sm);
     padding: 0.35rem 1.6rem 0.35rem 0.65rem;
     font: inherit;
     font-size: 0.9rem;
-    color: var(--color-text);
+    color: #ffffff;
     cursor: pointer;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='%236a5a48' d='M1 1l5 5 5-5'/></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='%238e8e9a' d='M1 1l5 5 5-5'/></svg>");
     background-repeat: no-repeat;
     background-position: right 0.5rem center;
     background-size: 10px 7px;
@@ -322,12 +310,12 @@ a:focus-visible {
 
 .hero__title {
     font-size: clamp(2.2rem, 5vw, 3.5rem);
-    color: var(--color-accent-dark);
+    color: var(--color-text);
     margin: var(--space-1) 0 var(--space-2);
 }
 
 .hero__lead {
-    font-family: "Borsok", var(--font-body);
+    font-family: var(--font-body);
     font-size: 1.05rem;
     color: var(--color-text-muted);
     margin: 0 auto var(--space-3);
@@ -353,7 +341,7 @@ a:focus-visible {
 
 .toc__title {
     font-size: 2rem;
-    color: var(--color-accent-dark);
+    color: var(--color-text);
     text-align: center;
     margin-bottom: var(--space-3);
 }
@@ -377,7 +365,7 @@ a:focus-visible {
     padding: 0.7em 1em;
     border-radius: var(--radius-sm);
     color: var(--color-text);
-    font-family: "Borsok", var(--font-body);
+    font-family: var(--font-body);
     font-weight: 500;
     background: transparent;
     transition: background 0.15s ease;
@@ -434,19 +422,19 @@ a:focus-visible {
 
 .section__title {
     font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-    color: var(--color-accent-dark);
+    color: var(--color-text);
     margin-bottom: var(--space-1);
 }
 
 .section__subtitle {
     font-size: clamp(1.3rem, 3vw, 1.8rem);
-    color: var(--color-accent-dark);
+    color: var(--color-text);
     margin: var(--space-5) 0 var(--space-2);
     font-family: var(--font-display);
 }
 
 .section__intro {
-    font-family: "Borsok", var(--font-body);
+    font-family: var(--font-body);
     color: var(--color-text-muted);
     max-width: 60ch;
     margin: 0 auto;
@@ -454,7 +442,7 @@ a:focus-visible {
 }
 
 .section__notes {
-    font-family: "Borsok", var(--font-body);
+    font-family: var(--font-body);
     max-width: 64ch;
     margin: 0 auto var(--space-3);
     padding-left: var(--space-3);
@@ -498,9 +486,9 @@ a:focus-visible {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #e63946;
+    background: #e94560;
     color: #fff;
-    font-family: "Fredoka", var(--font-display);
+    font-family: var(--font-display);
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 0.5px;
@@ -529,8 +517,8 @@ a:focus-visible {
 }
 
 .parts-grid figcaption {
-    font-family: "Borsok", "Fredoka", var(--font-display);
-    font-weight: 600;
+    font-family: var(--font-display);
+    font-weight: 700;
     font-size: 0.95rem;
     color: var(--color-text);
     text-align: center;
@@ -568,7 +556,7 @@ a:focus-visible {
 .symbols-key__title {
     font-family: var(--font-display);
     font-size: 1rem;
-    color: var(--color-accent-dark);
+    color: var(--color-text);
     margin: 0 0 var(--space-1);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -606,7 +594,7 @@ a:focus-visible {
     align-items: flex-start;
     gap: var(--space-2);
     padding: var(--space-2) 0;
-    border-bottom: 1px dashed rgba(106, 90, 72, 0.2);
+    border-bottom: 1px dashed rgba(142, 142, 154, 0.25);
 }
 
 .steps li::before {
@@ -670,25 +658,38 @@ a:focus-visible {
 .cta {
     text-align: center;
     padding: var(--space-6) var(--space-3);
-    background: var(--color-surface-alt);
+    background: #e94560;
     margin-top: var(--space-5);
 }
 
 .cta__title {
     font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-    color: var(--color-accent-dark);
+    color: #ffffff;
     margin-bottom: var(--space-2);
 }
 
 .cta__lead {
-    color: var(--color-text-muted);
+    color: rgba(255, 255, 255, 0.85);
     margin-bottom: var(--space-3);
+}
+
+.cta .btn--primary {
+    background: #ffffff;
+    color: #e94560;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.cta .btn--primary:hover,
+.cta .btn--primary:focus-visible {
+    background: #f5f5f7;
+    transform: translateY(-1px);
 }
 
 .site-footer {
     text-align: center;
     padding: var(--space-4) var(--space-3);
-    color: var(--color-text-muted);
+    background: #1a1a2e;
+    color: rgba(255, 255, 255, 0.7);
     font-size: 0.85rem;
 }
 

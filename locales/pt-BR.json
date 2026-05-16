@@ -1,11 +1,11 @@
 {
-  "meta.title": "Cute Flexi Maker — Guia de Peças",
-  "meta.description": "Guia visual de peças do Cute Flexi Maker. Explore animais-base, cabeças, olhos, orelhas, chapéus, segmentos de corpo, pernas, caudas, acessórios, símbolos, detalhes, chifres e muito mais.",
-  "meta.ogTitle": "Cute Flexi Maker — Guia de Peças",
-  "meta.ogDescription": "Guia visual de peças do Cute Flexi Maker.",
+  "meta.title": "druckpunkt — Guia de Peças",
+  "meta.description": "Guia visual de peças do druckpunkt. Explore animais-base, cabeças, olhos, orelhas, chapéus, segmentos de corpo, pernas, caudas, acessórios, símbolos, detalhes, chifres e muito mais.",
+  "meta.ogTitle": "druckpunkt — Guia de Peças",
+  "meta.ogDescription": "Guia visual de peças do druckpunkt.",
 
   "nav.skip": "Pular para o conteúdo",
-  "nav.brand.title": "Cute Flexi Maker",
+  "nav.brand.title": "druckpunkt",
   "nav.brand.subtitle": "Guia de Peças · v1.0",
   "nav.contents": "Sumário",
   "nav.animals": "Animais",
@@ -15,7 +15,7 @@
 
   "hero.eyebrow": "Versão 1.0",
   "hero.title": "Guia de Peças",
-  "hero.lead": "Explore todas as peças disponíveis no Cute Flexi Maker. Comece com um animal-base e depois personalize cabeças, olhos, orelhas, pernas, acessórios e detalhes para criar o flexi perfeito. Use o sumário abaixo para ir direto a qualquer categoria.",
+  "hero.lead": "Explore todas as peças disponíveis no druckpunkt. Comece com um animal-base e depois personalize cabeças, olhos, orelhas, pernas, acessórios e detalhes para criar o flexi perfeito. Use o sumário abaixo para ir direto a qualquer categoria.",
   "hero.browse": "Explorar o guia",
   "hero.download": "Baixar PDF",
 
@@ -73,7 +73,7 @@
   "section.horns.note.1": "Chifres selecionados podem ser escolhidos ao mesmo tempo.",
 
   "section.changing-colors.title": "Mudando as Cores",
-  "section.changing-colors.intro": "O Cute Flexi Maker permite alterar a cor de cada elemento para que sua criação fique exatamente como você quer.",
+  "section.changing-colors.intro": "O druckpunkt permite alterar a cor de cada elemento para que sua criação fique exatamente como você quer.",
   "steps.1": "A cor da pele altera a cor base de todo o flexi.",
   "steps.2": "Para abrir o menu de cores, clique no círculo colorido à direita do nome da categoria.",
   "steps.3": "Para elementos com vários componentes, clique na seta suspensa para ver todos os subcomponentes daquele elemento.",
@@ -122,7 +122,7 @@
   "cta.lead": "Baixe o PDF completo para manter o guia à mão offline.",
   "cta.button": "Baixar PDF (8 páginas)",
 
-  "footer.brand": "Cute Flexi Maker — Guia de Peças · v1.0",
+  "footer.brand": "druckpunkt — Guia de Peças · v1.0",
   "footer.attribution": "Edição HTML reconstruída para a web. Arte e conceito originais © seus respectivos donos.",
 
   "btn.backToTop": "Voltar ao topo",

@@ -1,11 +1,11 @@
 {
-  "meta.title": "Cute Flexi Maker — Teile-Übersicht",
-  "meta.description": "Visuelle Teile-Übersicht für Cute Flexi Maker. Stöbere durch Basistiere, Köpfe, Augen, Ohren, Hüte, Körpersegmente, Beine, Schwänze, Accessoires, Symbole, Details, Hörner und mehr.",
-  "meta.ogTitle": "Cute Flexi Maker — Teile-Übersicht",
-  "meta.ogDescription": "Visuelle Teile-Übersicht für Cute Flexi Maker.",
+  "meta.title": "druckpunkt — Teile-Übersicht",
+  "meta.description": "Visuelle Teile-Übersicht für druckpunkt. Stöbere durch Basistiere, Köpfe, Augen, Ohren, Hüte, Körpersegmente, Beine, Schwänze, Accessoires, Symbole, Details, Hörner und mehr.",
+  "meta.ogTitle": "druckpunkt — Teile-Übersicht",
+  "meta.ogDescription": "Visuelle Teile-Übersicht für druckpunkt.",
 
   "nav.skip": "Zum Inhalt springen",
-  "nav.brand.title": "Cute Flexi Maker",
+  "nav.brand.title": "druckpunkt",
   "nav.brand.subtitle": "Teile-Übersicht · v1.0",
   "nav.contents": "Inhalt",
   "nav.animals": "Tiere",
@@ -15,7 +15,7 @@
 
   "hero.eyebrow": "Version 1.0",
   "hero.title": "Teile-Übersicht",
-  "hero.lead": "Stöbere durch alle Teile, die in Cute Flexi Maker verfügbar sind. Beginne mit einem Basistier und gestalte dann Köpfe, Augen, Ohren, Beine, Accessoires und Details, um deinen perfekten Flexi zu entwerfen. Nutze das Inhaltsverzeichnis unten, um direkt zu jeder Kategorie zu springen.",
+  "hero.lead": "Stöbere durch alle Teile, die in druckpunkt verfügbar sind. Beginne mit einem Basistier und gestalte dann Köpfe, Augen, Ohren, Beine, Accessoires und Details, um deinen perfekten Flexi zu entwerfen. Nutze das Inhaltsverzeichnis unten, um direkt zu jeder Kategorie zu springen.",
   "hero.browse": "Übersicht öffnen",
   "hero.download": "PDF herunterladen",
 
@@ -73,7 +73,7 @@
   "section.horns.note.1": "Ausgewählte Hörner können gleichzeitig gewählt werden.",
 
   "section.changing-colors.title": "Farben ändern",
-  "section.changing-colors.intro": "Mit Cute Flexi Maker kannst du die Farbe jedes Elements anpassen, damit deine Kreation genau so aussieht, wie du sie willst.",
+  "section.changing-colors.intro": "Mit druckpunkt kannst du die Farbe jedes Elements anpassen, damit deine Kreation genau so aussieht, wie du sie willst.",
   "steps.1": "Die Hautfarbe ändert die Grundfarbe des gesamten Flexi.",
   "steps.2": "Um das Farbmenü zu öffnen, klicke auf den farbigen Kreis rechts neben dem Kategorienamen.",
   "steps.3": "Bei Elementen mit mehreren Komponenten klicke auf den Aufklappen-Pfeil, um alle Unterkomponenten anzuzeigen.",
@@ -122,7 +122,7 @@
   "cta.lead": "Hol dir das vollständige PDF, um die Übersicht offline parat zu haben.",
   "cta.button": "PDF herunterladen (8 Seiten)",
 
-  "footer.brand": "Cute Flexi Maker — Teile-Übersicht · v1.0",
+  "footer.brand": "druckpunkt — Teile-Übersicht · v1.0",
   "footer.attribution": "HTML-Edition für das Web neu aufgebaut. Originalillustrationen & -konzept © der jeweiligen Eigentümer.",
 
   "btn.backToTop": "Nach oben",

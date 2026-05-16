@@ -344,7 +344,7 @@
             ".zoom-modal__caption {",
             "  margin: 0;",
             "  color: #f5ecdc;",
-            "  font-family: \"Borsok\", \"Fredoka\", var(--font-display, system-ui), sans-serif;",
+            "  font-family: \"Outfit\", var(--font-display, system-ui), \"Helvetica Neue\", sans-serif;",
             "  font-size: 1.1rem;",
             "  letter-spacing: 1px;",
             "  text-transform: uppercase;",

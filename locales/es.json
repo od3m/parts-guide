@@ -1,11 +1,11 @@
 {
-  "meta.title": "Cute Flexi Maker — Guía de Piezas",
-  "meta.description": "Guía visual de piezas de Cute Flexi Maker. Explora animales base, cabezas, ojos, orejas, sombreros, segmentos del cuerpo, patas, colas, accesorios, símbolos, detalles, cuernos y más.",
-  "meta.ogTitle": "Cute Flexi Maker — Guía de Piezas",
-  "meta.ogDescription": "Guía visual de piezas de Cute Flexi Maker.",
+  "meta.title": "druckpunkt — Guía de Piezas",
+  "meta.description": "Guía visual de piezas de druckpunkt. Explora animales base, cabezas, ojos, orejas, sombreros, segmentos del cuerpo, patas, colas, accesorios, símbolos, detalles, cuernos y más.",
+  "meta.ogTitle": "druckpunkt — Guía de Piezas",
+  "meta.ogDescription": "Guía visual de piezas de druckpunkt.",
 
   "nav.skip": "Saltar al contenido",
-  "nav.brand.title": "Cute Flexi Maker",
+  "nav.brand.title": "druckpunkt",
   "nav.brand.subtitle": "Guía de Piezas · v1.0",
   "nav.contents": "Contenido",
   "nav.animals": "Animales",
@@ -15,7 +15,7 @@
 
   "hero.eyebrow": "Versión 1.0",
   "hero.title": "Guía de Piezas",
-  "hero.lead": "Explora todas las piezas disponibles en Cute Flexi Maker. Empieza con un animal base y luego personaliza cabezas, ojos, orejas, patas, accesorios y detalles para diseñar tu flexi perfecto. Usa el índice de abajo para saltar a cualquier categoría.",
+  "hero.lead": "Explora todas las piezas disponibles en druckpunkt. Empieza con un animal base y luego personaliza cabezas, ojos, orejas, patas, accesorios y detalles para diseñar tu flexi perfecto. Usa el índice de abajo para saltar a cualquier categoría.",
   "hero.browse": "Explorar la guía",
   "hero.download": "Descargar PDF",
 
@@ -73,7 +73,7 @@
   "section.horns.note.1": "Algunos cuernos pueden elegirse al mismo tiempo.",
 
   "section.changing-colors.title": "Cambiar Colores",
-  "section.changing-colors.intro": "Cute Flexi Maker te permite cambiar el color de cada elemento para que tu creación quede exactamente como la quieres.",
+  "section.changing-colors.intro": "druckpunkt te permite cambiar el color de cada elemento para que tu creación quede exactamente como la quieres.",
   "steps.1": "El color de la piel cambia el color base de todo el flexi.",
   "steps.2": "Para abrir el menú de colores, haz clic en el círculo de color a la derecha del nombre de la categoría.",
   "steps.3": "Para los elementos con varios componentes, haz clic en la flecha desplegable para ver todos los subcomponentes de ese elemento.",
@@ -122,7 +122,7 @@
   "cta.lead": "Descarga el PDF completo para tener la guía a mano sin conexión.",
   "cta.button": "Descargar PDF (8 páginas)",
 
-  "footer.brand": "Cute Flexi Maker — Guía de Piezas · v1.0",
+  "footer.brand": "druckpunkt — Guía de Piezas · v1.0",
   "footer.attribution": "Edición HTML reconstruida para la web. Ilustraciones y concepto originales © sus respectivos dueños.",
 
   "btn.backToTop": "Volver arriba",
