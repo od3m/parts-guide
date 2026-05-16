@@ -15,7 +15,7 @@
     --color-text: #1a1a2e;
     --color-text-muted: #8e8e9a;
     --color-accent: #e94560;
-    --color-accent-dark: #c73050;
+    --color-accent-dark: #2d2d44;
     --color-shadow: rgba(26, 26, 46, 0.12);
 
     /* Typography — Druckpunkt brand */
@@ -79,7 +79,7 @@ h1, h2, h3 {
 }
 
 a {
-    color: var(--color-accent-dark);
+    color: var(--color-text);
     text-decoration: none;
 }
 
@@ -154,7 +154,7 @@ a:focus-visible {
 
 .btn--ghost:hover,
 .btn--ghost:focus-visible {
-    background: var(--color-text);
+    background: var(--color-accent-dark);
     color: #fff;
     text-decoration: none;
 }
@@ -208,14 +208,6 @@ a:focus-visible {
 
 .brand-punkt {
     color: #e94560;
-}
-
-.brand-dot {
-    color: #e94560;
-    font-size: 0.5em;
-    vertical-align: super;
-    letter-spacing: 0;
-    margin-left: 1px;
 }
 
 .site-header__subtitle {
@@ -318,7 +310,7 @@ a:focus-visible {
 
 .hero__title {
     font-size: clamp(2.2rem, 5vw, 3.5rem);
-    color: var(--color-accent-dark);
+    color: var(--color-text);
     margin: var(--space-1) 0 var(--space-2);
 }
 
@@ -349,7 +341,7 @@ a:focus-visible {
 
 .toc__title {
     font-size: 2rem;
-    color: var(--color-accent-dark);
+    color: var(--color-text);
     text-align: center;
     margin-bottom: var(--space-3);
 }
@@ -430,13 +422,13 @@ a:focus-visible {
 
 .section__title {
     font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-    color: var(--color-accent-dark);
+    color: var(--color-text);
     margin-bottom: var(--space-1);
 }
 
 .section__subtitle {
     font-size: clamp(1.3rem, 3vw, 1.8rem);
-    color: var(--color-accent-dark);
+    color: var(--color-text);
     margin: var(--space-5) 0 var(--space-2);
     font-family: var(--font-display);
 }
@@ -564,7 +556,7 @@ a:focus-visible {
 .symbols-key__title {
     font-family: var(--font-display);
     font-size: 1rem;
-    color: var(--color-accent-dark);
+    color: var(--color-text);
     margin: 0 0 var(--space-1);
     text-transform: uppercase;
     letter-spacing: 1px;
