@@ -18,9 +18,9 @@
     --color-accent-dark: #c73050;
     --color-shadow: rgba(26, 26, 46, 0.12);
 
-    /* Typography */
-    --font-display: "Bowlby One", "Bungee", system-ui, -apple-system, sans-serif;
-    --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    /* Typography — Druckpunkt brand */
+    --font-display: "Outfit", "Helvetica Neue", Arial, sans-serif;
+    --font-body: "DM Sans", "Helvetica Neue", Arial, sans-serif;
 
     /* Spacing */
     --space-1: 0.5rem;
@@ -39,23 +39,6 @@
     --header-height: 68px;
 }
 
-@font-face {
-    font-family: "Bowlby One";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local("Bowlby One"),
-         url("https://fonts.gstatic.com/s/bowlbyone/v23/taiPGmVuC4y96PFeqp8sqomI_OE.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Borsok";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url("../borsok-font/boorsok.ttf") format("truetype"),
-         url("../borsok-font/boorsok.otf") format("opentype");
-}
 
 
 /* ----------------------------------------------------------
@@ -78,7 +61,7 @@ body {
     color: var(--color-text);
     font-family: var(--font-body);
     font-size: 16px;
-    line-height: 1.55;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -219,7 +202,20 @@ a:focus-visible {
 .site-header__title {
     font-family: var(--font-display);
     font-size: 1.15rem;
-    letter-spacing: 0.5px;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.brand-punkt {
+    color: #e94560;
+}
+
+.brand-dot {
+    color: #e94560;
+    font-size: 0.5em;
+    vertical-align: super;
+    letter-spacing: 0;
+    margin-left: 1px;
 }
 
 .site-header__subtitle {
@@ -327,7 +323,7 @@ a:focus-visible {
 }
 
 .hero__lead {
-    font-family: "Borsok", var(--font-body);
+    font-family: var(--font-body);
     font-size: 1.05rem;
     color: var(--color-text-muted);
     margin: 0 auto var(--space-3);
@@ -377,7 +373,7 @@ a:focus-visible {
     padding: 0.7em 1em;
     border-radius: var(--radius-sm);
     color: var(--color-text);
-    font-family: "Borsok", var(--font-body);
+    font-family: var(--font-body);
     font-weight: 500;
     background: transparent;
     transition: background 0.15s ease;
@@ -446,7 +442,7 @@ a:focus-visible {
 }
 
 .section__intro {
-    font-family: "Borsok", var(--font-body);
+    font-family: var(--font-body);
     color: var(--color-text-muted);
     max-width: 60ch;
     margin: 0 auto;
@@ -454,7 +450,7 @@ a:focus-visible {
 }
 
 .section__notes {
-    font-family: "Borsok", var(--font-body);
+    font-family: var(--font-body);
     max-width: 64ch;
     margin: 0 auto var(--space-3);
     padding-left: var(--space-3);
@@ -500,7 +496,7 @@ a:focus-visible {
     justify-content: center;
     background: #e94560;
     color: #fff;
-    font-family: "Fredoka", var(--font-display);
+    font-family: var(--font-display);
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 0.5px;
@@ -529,8 +525,8 @@ a:focus-visible {
 }
 
 .parts-grid figcaption {
-    font-family: "Borsok", "Fredoka", var(--font-display);
-    font-weight: 600;
+    font-family: var(--font-display);
+    font-weight: 700;
     font-size: 0.95rem;
     color: var(--color-text);
     text-align: center;

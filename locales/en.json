@@ -1,11 +1,11 @@
 {
-  "meta.title": "Cute Flexi Maker — Parts Guide",
-  "meta.description": "Visual parts guide for Cute Flexi Maker. Browse base animals, heads, eyes, ears, hats, body segments, legs, tails, accessories, symbols, details, horns and more.",
-  "meta.ogTitle": "Cute Flexi Maker — Parts Guide",
-  "meta.ogDescription": "Visual parts guide for Cute Flexi Maker.",
+  "meta.title": "druckpunkt — Parts Guide",
+  "meta.description": "Visual parts guide for druckpunkt. Browse base animals, heads, eyes, ears, hats, body segments, legs, tails, accessories, symbols, details, horns and more.",
+  "meta.ogTitle": "druckpunkt — Parts Guide",
+  "meta.ogDescription": "Visual parts guide for druckpunkt.",
 
   "nav.skip": "Skip to contents",
-  "nav.brand.title": "Cute Flexi Maker",
+  "nav.brand.title": "druckpunkt",
   "nav.brand.subtitle": "Parts Guide · v1.0",
   "nav.contents": "Contents",
   "nav.animals": "Animals",
@@ -15,7 +15,7 @@
 
   "hero.eyebrow": "Version 1.0",
   "hero.title": "Parts Guide",
-  "hero.lead": "Browse every part available in Cute Flexi Maker. Start with a base animal, then customize heads, eyes, ears, legs, accessories and details to design your perfect flexi. Use the table of contents below to jump to any category.",
+  "hero.lead": "Browse every part available in druckpunkt. Start with a base animal, then customize heads, eyes, ears, legs, accessories and details to design your perfect flexi. Use the table of contents below to jump to any category.",
   "hero.browse": "Browse the guide",
   "hero.download": "Download PDF",
 
@@ -73,7 +73,7 @@
   "section.horns.note.1": "Select horns can be chosen at the same time.",
 
   "section.changing-colors.title": "Changing Colors",
-  "section.changing-colors.intro": "Cute Flexi Maker lets you change the color of every element so your creation looks exactly the way you want.",
+  "section.changing-colors.intro": "druckpunkt lets you change the color of every element so your creation looks exactly the way you want.",
   "steps.1": "Skin color changes the base color for the entire flexi.",
   "steps.2": "To open the color menu, click the colored circle to the right of the category name.",
   "steps.3": "For elements with multiple components, click the drop-down arrow to view all sub-components for that element.",
@@ -122,7 +122,7 @@
   "cta.lead": "Grab the full PDF to keep the guide handy offline.",
   "cta.button": "Download PDF (8 pages)",
 
-  "footer.brand": "Cute Flexi Maker — Parts Guide · v1.0",
+  "footer.brand": "druckpunkt — Parts Guide · v1.0",
   "footer.attribution": "HTML edition rebuilt for the web. Original artwork & concept © their respective owners.",
 
   "btn.backToTop": "Back to top",
