@@ -37,43 +37,38 @@ echo "$NEW" | sed 's/^/  /'
 echo
 
 # ── 4. Was hat sich geändert? ────────────────────────────────────────────
-NEW_IMGS=$(git diff HEAD..upstream/main --name-only | grep '^images/parts/' || true)
-NEW_CODE=$(git diff HEAD..upstream/main --name-only | grep -E '\.(html|css|js|json)$' || true)
+NEW_IMGS=$(git diff HEAD..upstream/main --name-only 2>/dev/null | grep '^images/' || true)
+NEW_CODE=$(git diff HEAD..upstream/main --name-only 2>/dev/null | grep -E '\.(html|css|js|json)$' || true)
 
 if [ -n "$NEW_IMGS" ]; then
-  echo -e "${YELLOW}Neue/geänderte Teile-Bilder:${NC}"
+  echo -e "${YELLOW}Geänderte Bilder:${NC}"
   echo "$NEW_IMGS" | sed 's/^/  /'
   echo
 fi
 if [ -n "$NEW_CODE" ]; then
-  echo -e "${YELLOW}Geänderte Code-Dateien:${NC}"
+  echo -e "${YELLOW}Geänderte Code-Dateien (werden NICHT automatisch übernommen):${NC}"
   echo "$NEW_CODE" | sed 's/^/  /'
+  echo -e "  → Schau sie dir manuell an und übertrage nur was sinnvoll ist."
   echo
 fi
 
-# ── 5. Merge ─────────────────────────────────────────────────────────────
-echo -e "${CYAN}Merge …${NC}"
-if git merge upstream/main --no-edit -m "sync: upstream $(date +%Y-%m-%d)"; then
-  echo -e "${GREEN}✓ Merge sauber${NC}"
+# ── 5. Nur Bilder übernehmen (kein Merge, keine History-Konflikte) ────────
+# Strategie: Wir ziehen gezielt den images/-Ordner vom Original rüber.
+# Branding-Dateien (css, html, js, locales) bleiben unberührt.
+echo -e "${CYAN}↓ Übernehme Bilder von upstream …${NC}"
+git checkout upstream/main -- images/
+echo -e "${GREEN}✓ images/ aktualisiert${NC}"
+
+# ── 6. Committen & pushen ────────────────────────────────────────────────
+git add images/
+if git diff --cached --quiet; then
+  echo -e "${GREEN}  Keine Änderungen in images/ — nichts zu committen.${NC}"
 else
-  echo -e "${RED}⚠  Merge-Konflikte in:${NC}"
-  git diff --name-only --diff-filter=U | sed 's/^/  /'
-  echo
-  echo -e "${YELLOW}Hinweis — diese Stellen immer zugunsten von druckpunkt auflösen:${NC}"
-  echo "  css/styles.css   →  :root Farben & Fonts behalten  (#1a1a2e, #e94560, Outfit/DM Sans)"
-  echo "  index.html       →  Titel, Header-Brand, OG-Tags behalten"
-  echo "  js/main.js       →  font-family Outfit behalten"
-  echo "  locales/*.json   →  nav.brand.title, meta.title druckpunkt behalten"
-  echo
-  echo "Nach dem Auflösen:"
-  echo "  git add . && git commit && bash sync-upstream.sh"
-  exit 1
+  git commit -m "sync: images from upstream $(date +%Y-%m-%d)"
+  echo -e "\n${CYAN}↑ Push zu origin …${NC}"
+  git push origin main
+  echo -e "${GREEN}✓ Fork gepusht — GitHub Pages baut neu (~1 Min)${NC}"
 fi
-
-# ── 6. Push → GitHub Pages aktualisiert automatisch ─────────────────────
-echo -e "\n${CYAN}↑ Push zu origin …${NC}"
-git push origin main
-echo -e "${GREEN}✓ Fork gepusht — GitHub Pages baut neu (~1 Min)${NC}"
 
 # ── 7. Neues Shopify-Liquid generieren ───────────────────────────────────
 if [ -f "$GENERATOR" ]; then
@@ -81,10 +76,10 @@ if [ -f "$GENERATOR" ]; then
   python3 "$GENERATOR"
   echo -e "${GREEN}✓ page.parts-guide.liquid aktualisiert${NC}"
 else
-  echo -e "${YELLOW}⚠  generate_parts_guide.py nicht gefunden — Liquid manuell generieren${NC}"
+  echo -e "${YELLOW}⚠  generate_parts_guide.py nicht gefunden${NC}"
 fi
 
-# ── 8. Checkliste ─────────────────────────────────────────────────────────
+# ── 8. Abschluss-Checkliste ──────────────────────────────────────────────
 echo
 echo -e "${BOLD}Was jetzt noch zu tun ist:${NC}"
 echo "  1. ~1 Min warten, dann Bilder prüfen:"
@@ -92,8 +87,9 @@ echo "     → https://od3m.github.io/parts-guide/images/hero.png"
 echo "  2. Neues Liquid in Shopify einsetzen:"
 echo "     → Theme-Editor → templates/page.part-guide.liquid → Inhalt ersetzen → Save"
 if [ -n "$NEW_IMGS" ]; then
-  echo "  3. Neue Teile in der Guide? generate_parts_guide.py hat ggf. NEU-Badges gesetzt."
-  echo "     Prüfe den Drift-Report oben."
+  echo "  3. Drift-Report oben prüfen — neue Teile brauchen ggf. ein deutsches Label"
+  echo "     in generate_parts_guide.py unter LABELS ergänzen, dann nochmal:"
+  echo "     python3 generate_parts_guide.py"
 fi
 echo
 echo -e "${GREEN}Fertig.${NC}"
