@@ -389,7 +389,7 @@
           {% assign parts = item | split: ',' %}
           <div class="dp-pg-card{% if parts[0] == 'party-hat' or parts[0] == 'police-hat' or parts[0] == 'sailor-hat' or parts[0] == 'traffic-cone' %} dp-pg-new{% endif %}">
             <div class="dp-pg-card-img">
-              <img src="{{ dp_pg_site_base }}/images/parts/hats/{{ parts[0] }}.png" alt="{{ parts[1] }}" width="530" height="530" loading="lazy">
+              <img src="{{ dp_pg_site_base }}/images/parts/hats/{{ parts[0] }}.png{% if parts[0] == 'police-hat' %}?v=20260828{% endif %}" alt="{{ parts[1] }}" width="530" height="530" loading="lazy">
             </div>
             <div class="dp-pg-card-label">{{ parts[1] }}</div>
           </div>

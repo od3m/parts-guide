@@ -248,6 +248,7 @@ def label_of(slug):
 # ─────────────────────────────────────────────────────────────────────────
 def emit_card_section(sec, ordered):
     pairs = "|".join(f"{s},{label_of(s)}" for s in ordered)
+    cache_buster = "{% if parts[0] == 'police-hat' %}?v=20260828{% endif %}" if sec["folder"] == "hats" else ""
     count = f"{len(ordered)} {sec['word']}"
     head = (f'      <div class="dp-pg-section-head"><h2>{sec["title"]}</h2>'
             f'<span class="dp-pg-count">{count}</span></div>')
@@ -272,7 +273,7 @@ def emit_card_section(sec, ordered):
           {{% assign parts = item | split: ',' %}}
           <div class="dp-pg-card{new_check}">
             <div class="dp-pg-card-img">
-              <img src="{{{{ dp_pg_site_base }}}}/images/parts/{sec['folder']}/{{{{ parts[0] }}}}.png" alt="{{{{ parts[1] }}}}" width="530" height="530" loading="lazy">
+              <img src="{{{{ dp_pg_site_base }}}}/images/parts/{sec['folder']}/{{{{ parts[0] }}}}.png{cache_buster}" alt="{{{{ parts[1] }}}}" width="530" height="530" loading="lazy">
             </div>
             <div class="dp-pg-card-label">{{{{ parts[1] }}}}</div>
           </div>
