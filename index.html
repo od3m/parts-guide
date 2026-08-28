@@ -1,437 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="meta.title">druckpunkt — Parts Guide</title>
-    <meta name="description" data-i18n-content="meta.description" content="Visual parts guide for druckpunkt. Browse base animals, heads, eyes, ears, hats, body segments, legs, tails, accessories, symbols, details, horns and more.">
-
-    <meta property="og:title" data-i18n-content="meta.ogTitle" content="druckpunkt — Parts Guide">
-    <meta property="og:description" data-i18n-content="meta.ogDescription" content="Visual parts guide for druckpunkt.">
-    <meta property="og:image" content="images/cover-og.jpg">
-    <meta property="og:type" content="article">
-
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A6%95%3C/text%3E%3C/svg%3E">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cute Flexi Maker – Parts Guide v2.1</title>
+  <style>
+    :root{--bg:#1a1a2e;--panel:#22223a;--muted:#a6a6b5;--text:#fff;--accent:#e94560;--line:#3a3a55}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,sans-serif}
+    header{position:sticky;top:0;z-index:3;background:#1a1a2ef2;border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+    header>div,main{max-width:1180px;margin:auto;padding:0 24px}header>div{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    h1,h2,h3{line-height:1.1}h1{font-size:clamp(2.3rem,6vw,4.5rem);margin:.2em 0}h2{font-size:1.6rem;margin:0}.brand{font-weight:800}.brand span{color:var(--accent)}
+    nav a{color:var(--text);text-decoration:none;margin-left:16px;font-size:.9rem}nav a:hover{color:var(--accent)}
+    .hero{padding:76px 0 48px;border-bottom:1px solid var(--line)}.eyebrow{color:var(--accent);font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:.75rem}.lead{max-width:680px;color:var(--muted);font-size:1.1rem}
+    .notice{margin-top:24px;padding:14px 16px;border:1px solid #69404b;border-radius:8px;color:#ffdbe1;background:#3a202b}
+    .toc{padding:36px 0;border-bottom:1px solid var(--line)}.toc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin-top:18px}.toc-grid a{padding:10px 12px;background:var(--panel);border:1px solid var(--line);border-radius:6px;color:var(--text);text-decoration:none}.toc-grid a:hover{border-color:var(--accent)}
+    section.guide-section{padding:42px 0 28px;border-bottom:1px solid var(--line);scroll-margin-top:82px}.section-head{display:flex;align-items:baseline;gap:12px;margin-bottom:20px}.count{color:var(--muted);font-size:.85rem}.intro{color:var(--muted);margin-top:-10px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:12px}.card{position:relative;overflow:hidden;background:var(--panel);border:1px solid var(--line);border-radius:9px}.card img{display:block;width:100%;aspect-ratio:1;object-fit:contain;background:#303047}.card p{margin:0;padding:9px;text-align:center;color:#eee;font-size:.9rem}.new{position:absolute;right:7px;top:7px;background:var(--accent);padding:2px 6px;border-radius:4px;font-size:.65rem;font-weight:800;z-index:1}.figure-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}.figure-grid .card img{aspect-ratio:4/3}.footer{padding:35px 0 60px;color:var(--muted);font-size:.9rem}
+    @media(max-width:700px){header nav{display:none}header>div,main{padding-left:16px;padding-right:16px}.cards{grid-template-columns:repeat(auto-fill,minmax(110px,1fr))}}
+  </style>
 </head>
 <body>
-    <a class="skip-link" href="#contents" data-i18n="nav.skip">Skip to contents</a>
-
-    <header class="site-header" role="banner">
-        <div class="site-header__inner">
-            <a href="#top" class="site-header__brand">
-                <span class="site-header__title">druck<span class="brand-punkt">punkt.</span></span>
-                <span class="site-header__subtitle" data-i18n="nav.brand.subtitle">Parts Guide · v1.0</span>
-            </a>
-            <nav class="site-header__nav" aria-label="Primary">
-                <a href="#contents" data-i18n="nav.contents">Contents</a>
-                <a href="#base-animals" data-i18n="nav.animals">Animals</a>
-                <a href="#accessories" data-i18n="nav.accessories">Accessories</a>
-                <label class="lang-picker-wrap">
-                    <span class="lang-picker-wrap__label" data-i18n="nav.language">Language</span>
-                    <select class="lang-picker" data-i18n-aria-label="nav.language" aria-label="Language">
-                        <option value="en">English</option>
-                        <option value="pt-BR">Português (BR)</option>
-                        <option value="es">Español</option>
-                        <option value="de">Deutsch</option>
-                    </select>
-                </label>
-                <a href="parts-guide.pdf" class="btn btn--primary" download data-i18n="nav.downloadPdf">Download PDF</a>
-            </nav>
-        </div>
-    </header>
-
-    <main id="top">
-        <section class="hero" aria-label="Cover">
-            <img src="images/hero.png" alt="druckpunkt: Parts Guide cover featuring 3D figurines" class="hero__image">
-            <div class="hero__overlay">
-                <p class="hero__eyebrow" data-i18n="hero.eyebrow">Version 1.0</p>
-                <h1 class="hero__title" data-i18n="hero.title">Parts Guide</h1>
-                <p class="hero__lead" data-i18n="hero.lead">Browse every part available in Cute Flexi Maker. Start with a base animal, then customize heads, eyes, ears, legs, accessories and details to design your perfect flexi. Use the table of contents below to jump to any category.</p>
-                <div class="hero__actions">
-                    <a class="btn btn--primary" href="#contents" data-i18n="hero.browse">Browse the guide</a>
-                    <a class="btn btn--ghost" href="parts-guide.pdf" download data-i18n="hero.download">Download PDF</a>
-                </div>
-            </div>
-        </section>
-
-        <nav id="contents" class="toc" aria-label="Table of contents">
-            <h2 class="toc__title" data-i18n="toc.title">Table of Contents</h2>
-            <ol class="toc__list">
-                <li><a href="#base-animals"><span data-i18n="toc.base-animals">Base Animals</span></a></li>
-                <li><a href="#heads"><span data-i18n="toc.heads">Heads</span></a></li>
-                <li><a href="#eyes"><span data-i18n="toc.eyes">Eyes</span></a></li>
-                <li><a href="#ears"><span data-i18n="toc.ears">Ears</span></a></li>
-                <li><a href="#hats"><span data-i18n="toc.hats">Hats</span></a></li>
-                <li><a href="#body-segments"><span data-i18n="toc.body-segments">Body Segments</span></a></li>
-                <li><a href="#bottom-segments"><span data-i18n="toc.bottom-segments">Bottom Segments</span></a></li>
-                <li><a href="#flexi-legs"><span data-i18n="toc.flexi-legs">Flexi Legs (Wings)</span></a></li>
-                <li><a href="#flexi-tails"><span data-i18n="toc.flexi-tails">Flexi Tails</span></a></li>
-                <li><a href="#legs"><span data-i18n="toc.legs">Legs</span></a></li>
-                <li><a href="#tails"><span data-i18n="toc.tails">Tails</span></a></li>
-                <li><a href="#accessories"><span data-i18n="toc.accessories">Accessories</span></a></li>
-                <li><a href="#symbols"><span data-i18n="toc.symbols">Symbols</span></a></li>
-                <li><a href="#details"><span data-i18n="toc.details">Details</span></a></li>
-                <li><a href="#horns"><span data-i18n="toc.horns">Horns</span></a></li>
-                <li><a href="#changing-colors"><span data-i18n="toc.changing-colors">Changing Colors</span></a></li>
-                <li><a href="#disable-parts"><span data-i18n="toc.disable-parts">Disable Parts</span></a></li>
-            </ol>
-        </nav>
-
-        <article class="guide">
-
-            <!-- ============================================================ -->
-            <!-- Page 2 : Base Animals -->
-            <!-- ============================================================ -->
-            <section class="section" id="base-animals" aria-labelledby="base-animals-title">
-                <header class="section__header">
-                    <h2 id="base-animals-title" class="section__title" data-i18n="section.base-animals.title">Base Animals</h2>
-                    <p class="section__intro" data-i18n="section.base-animals.intro">Start with one of the base animals. The dragon is the newest addition.</p>
-                </header>
-                <div class="parts-grid">
-                    <figure><img src="images/parts/base-animals/bee.png" alt="Bee" loading="lazy"><figcaption data-i18n="part.bee">Bee</figcaption></figure>
-                    <figure><img src="images/parts/base-animals/boar.png" alt="Boar" loading="lazy"><figcaption data-i18n="part.boar">Boar</figcaption></figure>
-                    <figure><img src="images/parts/base-animals/cat.png" alt="Cat" loading="lazy"><figcaption data-i18n="part.cat">Cat</figcaption></figure>
-                    <figure><img src="images/parts/base-animals/caterpillar.png" alt="Caterpillar" loading="lazy"><figcaption data-i18n="part.caterpillar">Caterpillar</figcaption></figure>
-                    <figure><img src="images/parts/base-animals/duck.png" alt="Duck" loading="lazy"><figcaption data-i18n="part.duck">Duck</figcaption></figure>
-                    <figure><span class="badge-new" aria-label="New" data-i18n="badge.new">NEW</span><img src="images/parts/base-animals/dragon.png" alt="Dragon (new)" loading="lazy"><figcaption data-i18n="part.dragon">Dragon</figcaption></figure>
-                    <figure><img src="images/parts/base-animals/eagle.png" alt="Eagle" loading="lazy"><figcaption data-i18n="part.eagle">Eagle</figcaption></figure>
-                    <figure><img src="images/parts/base-animals/elephant.png" alt="Elephant" loading="lazy"><figcaption data-i18n="part.elephant">Elephant</figcaption></figure>
-                    <figure><img src="images/parts/base-animals/mouse.png" alt="Mouse" loading="lazy"><figcaption data-i18n="part.mouse">Mouse</figcaption></figure>
-                    <figure><img src="images/parts/base-animals/parrot.png" alt="Parrot" loading="lazy"><figcaption data-i18n="part.parrot">Parrot</figcaption></figure>
-                    <figure><img src="images/parts/base-animals/pig.png" alt="Pig" loading="lazy"><figcaption data-i18n="part.pig">Pig</figcaption></figure>
-                    <figure><img src="images/parts/base-animals/snail.png" alt="Snail" loading="lazy"><figcaption data-i18n="part.snail">Snail</figcaption></figure>
-                    <figure><img src="images/parts/base-animals/t-rex.png" alt="T-Rex" loading="lazy"><figcaption data-i18n="part.trex">T-Rex</figcaption></figure>
-                </div>
-            </section>
-
-            <!-- Page 2 : Heads -->
-            <section class="section" id="heads" aria-labelledby="heads-title">
-                <header class="section__header">
-                    <h2 id="heads-title" class="section__title" data-i18n="section.heads.title">Heads</h2>
-                    <p class="section__intro" data-i18n="section.heads.intro">Pick a head to set the personality of your flexi.</p>
-                </header>
-                <div class="parts-grid">
-                    <figure><img src="images/parts/heads/base.png" alt="Base head" loading="lazy"><figcaption data-i18n="part.base">Base</figcaption></figure>
-                    <figure><img src="images/parts/heads/bee.png" alt="Bee head" loading="lazy"><figcaption data-i18n="part.bee">Bee</figcaption></figure>
-                    <figure><img src="images/parts/heads/dragon.png" alt="Dragon head" loading="lazy"><figcaption data-i18n="part.dragon">Dragon</figcaption></figure>
-                    <figure><img src="images/parts/heads/duck.png" alt="Duck head" loading="lazy"><figcaption data-i18n="part.duck">Duck</figcaption></figure>
-                    <figure><img src="images/parts/heads/elephant.png" alt="Elephant head" loading="lazy"><figcaption data-i18n="part.elephant">Elephant</figcaption></figure>
-                    <figure><img src="images/parts/heads/parrot.png" alt="Parrot head" loading="lazy"><figcaption data-i18n="part.parrot">Parrot</figcaption></figure>
-                    <figure><img src="images/parts/heads/pig.png" alt="Pig head" loading="lazy"><figcaption data-i18n="part.pig">Pig</figcaption></figure>
-                    <figure><img src="images/parts/heads/round.png" alt="Round head" loading="lazy"><figcaption data-i18n="part.round">Round</figcaption></figure>
-                    <figure><img src="images/parts/heads/snail.png" alt="Snail head" loading="lazy"><figcaption data-i18n="part.snail">Snail</figcaption></figure>
-                    <figure><img src="images/parts/heads/t-rex.png" alt="T-Rex head" loading="lazy"><figcaption data-i18n="part.trex">T-Rex</figcaption></figure>
-                </div>
-            </section>
-
-            <!-- ============================================================ -->
-            <!-- Page 3 : Eyes / Ears / Hats -->
-            <!-- ============================================================ -->
-            <section class="section" id="eyes" aria-labelledby="eyes-title">
-                <header class="section__header">
-                    <h2 id="eyes-title" class="section__title" data-i18n="section.eyes.title">Eyes</h2>
-                    <p class="section__intro" data-i18n="section.eyes.intro">Add expression with one of eleven eye shapes.</p>
-                </header>
-                <div class="parts-grid">
-                    <figure><img src="images/parts/eyes/base.png" alt="Base eyes" loading="lazy"><figcaption data-i18n="part.base">Base</figcaption></figure>
-                    <figure><img src="images/parts/eyes/big.png" alt="Big eyes" loading="lazy"><figcaption data-i18n="part.big">Big</figcaption></figure>
-                    <figure><img src="images/parts/eyes/black.png" alt="Black eyes" loading="lazy"><figcaption data-i18n="part.black">Black</figcaption></figure>
-                    <figure><img src="images/parts/eyes/color.png" alt="Color eyes" loading="lazy"><figcaption data-i18n="part.color">Color</figcaption></figure>
-                    <figure><img src="images/parts/eyes/cute.png" alt="Cute eyes" loading="lazy"><figcaption data-i18n="part.cute">Cute</figcaption></figure>
-                    <figure><img src="images/parts/eyes/heart.png" alt="Heart eyes" loading="lazy"><figcaption data-i18n="part.heart">Heart</figcaption></figure>
-                    <figure><img src="images/parts/eyes/long.png" alt="Long eyes" loading="lazy"><figcaption data-i18n="part.long">Long</figcaption></figure>
-                    <figure><img src="images/parts/eyes/reptile.png" alt="Reptile eyes" loading="lazy"><figcaption data-i18n="part.reptile">Reptile</figcaption></figure>
-                    <figure><img src="images/parts/eyes/sleep.png" alt="Sleep eyes" loading="lazy"><figcaption data-i18n="part.sleep">Sleep</figcaption></figure>
-                    <figure><img src="images/parts/eyes/smiley.png" alt="Smiley eyes" loading="lazy"><figcaption data-i18n="part.smiley">Smiley</figcaption></figure>
-                    <figure><img src="images/parts/eyes/x.png" alt="X eyes" loading="lazy"><figcaption data-i18n="part.x">X</figcaption></figure>
-                </div>
-            </section>
-
-            <section class="section" id="ears" aria-labelledby="ears-title">
-                <header class="section__header">
-                    <h2 id="ears-title" class="section__title" data-i18n="section.ears.title">Ears</h2>
-                </header>
-                <div class="parts-grid">
-                    <figure><img src="images/parts/ears/cat.png" alt="Cat ears" loading="lazy"><figcaption data-i18n="part.cat">Cat</figcaption></figure>
-                    <figure><img src="images/parts/ears/elephant.png" alt="Elephant ears" loading="lazy"><figcaption data-i18n="part.elephant">Elephant</figcaption></figure>
-                    <figure><img src="images/parts/ears/mouse.png" alt="Mouse ears" loading="lazy"><figcaption data-i18n="part.mouse">Mouse</figcaption></figure>
-                    <figure><img src="images/parts/ears/pig.png" alt="Pig ears" loading="lazy"><figcaption data-i18n="part.pig">Pig</figcaption></figure>
-                </div>
-            </section>
-
-            <section class="section" id="hats" aria-labelledby="hats-title">
-                <header class="section__header">
-                    <h2 id="hats-title" class="section__title" data-i18n="section.hats.title">Hats</h2>
-                </header>
-                <div class="parts-grid">
-                    <figure><img src="images/parts/hats/cowboy.png" alt="Cowboy hat" loading="lazy"><figcaption data-i18n="part.cowboy">Cowboy</figcaption></figure>
-                    <figure><img src="images/parts/hats/detective.png" alt="Detective hat" loading="lazy"><figcaption data-i18n="part.detective">Detective</figcaption></figure>
-                </div>
-            </section>
-
-            <!-- ============================================================ -->
-            <!-- Page 4 : Body / Bottom / Flexi Legs / Flexi Tails -->
-            <!-- ============================================================ -->
-            <section class="section" id="body-segments" aria-labelledby="body-segments-title">
-                <header class="section__header">
-                    <h2 id="body-segments-title" class="section__title" data-i18n="section.body-segments.title">Body Segments</h2>
-                </header>
-                <div class="parts-grid">
-                    <figure><img src="images/parts/body-segments/base.png" alt="Base body segment" loading="lazy"><figcaption data-i18n="part.base">Base</figcaption></figure>
-                    <figure><img src="images/parts/body-segments/base-small.png" alt="Base small body segment" loading="lazy"><figcaption data-i18n="part.baseSmall">Base Small</figcaption></figure>
-                    <figure><img src="images/parts/body-segments/fur.png" alt="Fur body segment" loading="lazy"><figcaption data-i18n="part.fur">Fur</figcaption></figure>
-                    <figure><img src="images/parts/body-segments/flex.png" alt="Flex body segment" loading="lazy"><figcaption data-i18n="part.flex">Flex</figcaption></figure>
-                </div>
-            </section>
-
-            <section class="section" id="bottom-segments" aria-labelledby="bottom-segments-title">
-                <header class="section__header">
-                    <h2 id="bottom-segments-title" class="section__title" data-i18n="section.bottom-segments.title">Bottom Segments</h2>
-                </header>
-                <div class="parts-grid">
-                    <figure><img src="images/parts/bottom-segments/bee.png" alt="Bee bottom segment" loading="lazy"><figcaption data-i18n="part.bee">Bee</figcaption></figure>
-                    <figure><img src="images/parts/bottom-segments/flex.png" alt="Flex bottom segment" loading="lazy"><figcaption data-i18n="part.flex">Flex</figcaption></figure>
-                    <figure><img src="images/parts/bottom-segments/mini-flex.png" alt="Mini Flex bottom segment" loading="lazy"><figcaption data-i18n="part.miniFlex">Mini Flex</figcaption></figure>
-                    <figure><img src="images/parts/bottom-segments/round.png" alt="Round bottom segment" loading="lazy"><figcaption data-i18n="part.round">Round</figcaption></figure>
-                    <figure><img src="images/parts/bottom-segments/snail.png" alt="Snail bottom segment" loading="lazy"><figcaption data-i18n="part.snail">Snail</figcaption></figure>
-                </div>
-            </section>
-
-            <section class="section" id="flexi-legs" aria-labelledby="flexi-legs-title">
-                <header class="section__header">
-                    <h2 id="flexi-legs-title" class="section__title" data-i18n="section.flexi-legs.title">Flexi Legs (Wings)</h2>
-                </header>
-                <div class="parts-grid">
-                    <figure><img src="images/parts/flexi-legs/angel.png" alt="Angel wings" loading="lazy"><figcaption data-i18n="part.angel">Angel</figcaption></figure>
-                    <figure><img src="images/parts/flexi-legs/bird.png" alt="Bird wings" loading="lazy"><figcaption data-i18n="part.bird">Bird</figcaption></figure>
-                    <figure><img src="images/parts/flexi-legs/dragon.png" alt="Dragon wings" loading="lazy"><figcaption data-i18n="part.dragon">Dragon</figcaption></figure>
-                </div>
-            </section>
-
-            <section class="section" id="flexi-tails" aria-labelledby="flexi-tails-title">
-                <header class="section__header">
-                    <h2 id="flexi-tails-title" class="section__title" data-i18n="section.flexi-tails.title">Flexi Tails</h2>
-                </header>
-                <div class="parts-grid">
-                    <figure><img src="images/parts/flexi-tails/feathered.png" alt="Feathered tail" loading="lazy"><figcaption data-i18n="part.feathered">Feathered</figcaption></figure>
-                    <figure><img src="images/parts/flexi-tails/dragon.png" alt="Dragon tail" loading="lazy"><figcaption data-i18n="part.dragon">Dragon</figcaption></figure>
-                    <figure><img src="images/parts/flexi-tails/dino.png" alt="Dino tail" loading="lazy"><figcaption data-i18n="part.dino">Dino</figcaption></figure>
-                </div>
-            </section>
-
-            <!-- ============================================================ -->
-            <!-- Page 5 : Legs / Tails -->
-            <!-- ============================================================ -->
-            <section class="section" id="legs" aria-labelledby="legs-title">
-                <header class="section__header">
-                    <h2 id="legs-title" class="section__title" data-i18n="section.legs.title">Legs</h2>
-                </header>
-                <ul class="section__notes">
-                    <li data-i18n="section.legs.note.1">Legs shown where available.</li>
-                    <li data-i18n="section.legs.note.2">Legs of the same name may look different depending on the segment.</li>
-                    <li data-i18n="section.legs.note.3">Legs only available on head segment when using Snail Head.</li>
-                </ul>
-                <div class="parts-grid">
-                    <figure><img src="images/parts/legs/bee.png" alt="Bee legs" loading="lazy"><figcaption data-i18n="part.bee">Bee</figcaption></figure>
-                    <figure><img src="images/parts/legs/bird.png" alt="Bird legs" loading="lazy"><figcaption data-i18n="part.bird">Bird</figcaption></figure>
-                    <figure><img src="images/parts/legs/cat.png" alt="Cat legs" loading="lazy"><figcaption data-i18n="part.cat">Cat</figcaption></figure>
-                    <figure><img src="images/parts/legs/caterpillar.png" alt="Caterpillar legs" loading="lazy"><figcaption data-i18n="part.caterpillar">Caterpillar</figcaption></figure>
-                    <figure><img src="images/parts/legs/duck.png" alt="Duck legs" loading="lazy"><figcaption data-i18n="part.duck">Duck</figcaption></figure>
-                    <figure><img src="images/parts/legs/dino.png" alt="Dino legs" loading="lazy"><figcaption data-i18n="part.dino">Dino</figcaption></figure>
-                    <figure><img src="images/parts/legs/dragon.png" alt="Dragon legs" loading="lazy"><figcaption data-i18n="part.dragon">Dragon</figcaption></figure>
-                    <figure><img src="images/parts/legs/elephant.png" alt="Elephant legs" loading="lazy"><figcaption data-i18n="part.elephant">Elephant</figcaption></figure>
-                    <figure><img src="images/parts/legs/generic.png" alt="Generic legs" loading="lazy"><figcaption data-i18n="part.generic">Generic</figcaption></figure>
-                    <figure><img src="images/parts/legs/pig.png" alt="Pig legs" loading="lazy"><figcaption data-i18n="part.pig">Pig</figcaption></figure>
-                    <figure><img src="images/parts/legs/small.png" alt="Small legs" loading="lazy"><figcaption data-i18n="part.small">Small</figcaption></figure>
-                    <figure><img src="images/parts/legs/raptor.png" alt="Raptor legs" loading="lazy"><figcaption data-i18n="part.raptor">Raptor</figcaption></figure>
-                </div>
-            </section>
-
-            <section class="section" id="tails" aria-labelledby="tails-title">
-                <header class="section__header">
-                    <h2 id="tails-title" class="section__title" data-i18n="section.tails.title">Tails</h2>
-                </header>
-                <div class="parts-grid">
-                    <figure><img src="images/parts/tails/bird.png" alt="Bird tail" loading="lazy"><figcaption data-i18n="part.bird">Bird</figcaption></figure>
-                    <figure><img src="images/parts/tails/cat.png" alt="Cat tail" loading="lazy"><figcaption data-i18n="part.cat">Cat</figcaption></figure>
-                    <figure><img src="images/parts/tails/duck.png" alt="Duck tail" loading="lazy"><figcaption data-i18n="part.duck">Duck</figcaption></figure>
-                    <figure><img src="images/parts/tails/tufted.png" alt="Tufted tail" loading="lazy"><figcaption data-i18n="part.tufted">Tufted</figcaption></figure>
-                    <figure><img src="images/parts/tails/mouse.png" alt="Mouse tail" loading="lazy"><figcaption data-i18n="part.mouse">Mouse</figcaption></figure>
-                    <figure><img src="images/parts/tails/pig.png" alt="Pig tail" loading="lazy"><figcaption data-i18n="part.pig">Pig</figcaption></figure>
-                    <figure><img src="images/parts/tails/sting.png" alt="Sting tail" loading="lazy"><figcaption data-i18n="part.sting">Sting</figcaption></figure>
-                    <figure><img src="images/parts/tails/dino.png" alt="Dino tail" loading="lazy"><figcaption data-i18n="part.dino">Dino</figcaption></figure>
-                </div>
-            </section>
-
-            <!-- ============================================================ -->
-            <!-- Page 6 : Accessories / Symbols -->
-            <!-- ============================================================ -->
-            <section class="section" id="accessories" aria-labelledby="accessories-title">
-                <header class="section__header">
-                    <h2 id="accessories-title" class="section__title" data-i18n="section.accessories.title">Accessories</h2>
-                    <p class="section__intro" data-i18n="section.accessories.intro">Accessories shown where available.</p>
-                </header>
-                <div class="parts-grid">
-                    <figure><img src="images/parts/accessories/apple.png" alt="Apple accessory" loading="lazy"><figcaption data-i18n="part.apple">Apple</figcaption></figure>
-                    <figure><img src="images/parts/accessories/bird.png" alt="Bird accessory" loading="lazy"><figcaption data-i18n="part.bird">Bird</figcaption></figure>
-                    <figure><img src="images/parts/accessories/bow.png" alt="Bow accessory" loading="lazy"><figcaption data-i18n="part.bow">Bow</figcaption></figure>
-                    <figure><img src="images/parts/accessories/bunny-ears.png" alt="Bunny ears accessory" loading="lazy"><figcaption data-i18n="part.bunnyEars">Bunny Ears</figcaption></figure>
-                    <figure><img src="images/parts/accessories/clover.png" alt="Clover accessory" loading="lazy"><figcaption data-i18n="part.clover">Clover</figcaption></figure>
-                    <figure><img src="images/parts/accessories/crest.png" alt="Crest accessory" loading="lazy"><figcaption data-i18n="part.crest">Crest</figcaption></figure>
-                    <figure><img src="images/parts/accessories/crown.png" alt="Crown accessory" loading="lazy"><figcaption data-i18n="part.crown">Crown</figcaption></figure>
-                    <figure><img src="images/parts/accessories/egg.png" alt="Egg accessory" loading="lazy"><figcaption data-i18n="part.egg">Egg</figcaption></figure>
-                    <figure><img src="images/parts/accessories/flower.png" alt="Flower accessory" loading="lazy"><figcaption data-i18n="part.flower">Flower</figcaption></figure>
-                    <figure><img src="images/parts/accessories/heart.png" alt="Heart accessory" loading="lazy"><figcaption data-i18n="part.heart">Heart</figcaption></figure>
-                    <figure><img src="images/parts/accessories/paw.png" alt="Paw accessory" loading="lazy"><figcaption data-i18n="part.paw">Paw</figcaption></figure>
-                    <figure><img src="images/parts/accessories/shell.png" alt="Shell accessory" loading="lazy"><figcaption data-i18n="part.shell">Shell</figcaption></figure>
-                    <figure><img src="images/parts/accessories/spike.png" alt="Spike accessory" loading="lazy"><figcaption data-i18n="part.spike">Spike</figcaption></figure>
-                    <figure><img src="images/parts/accessories/spines.png" alt="Spines accessory" loading="lazy"><figcaption data-i18n="part.spines">Spines</figcaption></figure>
-                    <figure><img src="images/parts/accessories/sprout.png" alt="Sprout accessory" loading="lazy"><figcaption data-i18n="part.sprout">Sprout</figcaption></figure>
-                    <figure><img src="images/parts/accessories/star.png" alt="Star accessory" loading="lazy"><figcaption data-i18n="part.star">Star</figcaption></figure>
-                    <figure><img src="images/parts/accessories/strawberry.png" alt="Strawberry accessory" loading="lazy"><figcaption data-i18n="part.strawberry">Strawberry</figcaption></figure>
-                </div>
-            </section>
-
-            <section class="section" id="symbols" aria-labelledby="symbols-title">
-                <header class="section__header">
-                    <h2 id="symbols-title" class="section__title" data-i18n="section.symbols.title">Symbols</h2>
-                    <p class="section__intro" data-i18n="section.symbols.intro">Symbols shown where available.</p>
-                </header>
-                <div class="symbols-layout">
-                    <figure class="symbols-layout__preview">
-                        <img src="images/parts/symbols/alphabet.png" alt="Symbol example: dice showing letters A and B" loading="lazy">
-                    </figure>
-                    <div class="symbols-layout__keys">
-                        <div class="symbols-key">
-                            <h3 class="symbols-key__title" data-i18n="symbols.letters">Letters</h3>
-                            <p class="symbols-key__list">a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
-                        </div>
-                        <div class="symbols-key">
-                            <h3 class="symbols-key__title" data-i18n="symbols.numbers">Numbers</h3>
-                            <p class="symbols-key__list">0 1 2 3 4 5 6 7 8 9</p>
-                        </div>
-                        <div class="symbols-key">
-                            <h3 class="symbols-key__title" data-i18n="symbols.other">Other</h3>
-                            <p class="symbols-key__list">&amp; @ ! + ?</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ============================================================ -->
-            <!-- Page 7 : Details / Horns -->
-            <!-- ============================================================ -->
-            <section class="section" id="details" aria-labelledby="details-title">
-                <header class="section__header">
-                    <h2 id="details-title" class="section__title" data-i18n="section.details.title">Details</h2>
-                    <p class="section__intro" data-i18n="section.details.intro">Tiny details bring character. Multiple details can be combined on the same flexi.</p>
-                </header>
-                <ul class="section__notes">
-                    <li data-i18n="section.details.note.1">Details shown where available.</li>
-                    <li data-i18n="section.details.note.2">Multiple details can be chosen at the same time.</li>
-                </ul>
-                <div class="parts-grid">
-                    <figure><img src="images/parts/details/angry-eyelids.png" alt="Angry Eyelids detail" loading="lazy"><figcaption data-i18n="part.angryEyelids">Angry Eyelids</figcaption></figure>
-                    <figure><img src="images/parts/details/cheeks.png" alt="Cheeks detail" loading="lazy"><figcaption data-i18n="part.cheeks">Cheeks</figcaption></figure>
-                    <figure><img src="images/parts/details/scales-top.png" alt="Scales Top detail" loading="lazy"><figcaption data-i18n="part.scalesTop">Scales Top</figcaption></figure>
-                    <figure><img src="images/parts/details/scales-side.png" alt="Scales Side detail" loading="lazy"><figcaption data-i18n="part.scalesSide">Scales Side</figcaption></figure>
-                    <figure><img src="images/parts/details/eyelashes.png" alt="Eyelashes detail" loading="lazy"><figcaption data-i18n="part.eyelashes">Eyelashes</figcaption></figure>
-                    <figure><img src="images/parts/details/furry-cheeks.png" alt="Furry Cheeks detail" loading="lazy"><figcaption data-i18n="part.furryCheeks">Furry Cheeks</figcaption></figure>
-                    <figure><img src="images/parts/details/moustache.png" alt="Moustache detail" loading="lazy"><figcaption data-i18n="part.moustache">Moustache</figcaption></figure>
-                    <figure><img src="images/parts/details/pois.png" alt="Pois detail" loading="lazy"><figcaption data-i18n="part.pois">Pois</figcaption></figure>
-                    <figure><img src="images/parts/details/stripes.png" alt="Stripes detail" loading="lazy"><figcaption data-i18n="part.stripes">Stripes</figcaption></figure>
-                </div>
-            </section>
-
-            <section class="section" id="horns" aria-labelledby="horns-title">
-                <header class="section__header">
-                    <h2 id="horns-title" class="section__title" data-i18n="section.horns.title">Horns</h2>
-                    <p class="section__intro" data-i18n="section.horns.intro">Crown your flexi with horns, antennae or a unicorn spire.</p>
-                </header>
-                <ul class="section__notes">
-                    <li data-i18n="section.horns.note.1">Select horns can be chosen at the same time.</li>
-                </ul>
-                <div class="parts-grid">
-                    <figure><img src="images/parts/horns/antennae.png" alt="Antennae horns" loading="lazy"><figcaption data-i18n="part.antennae">Antennae</figcaption></figure>
-                    <figure><img src="images/parts/horns/dragon.png" alt="Dragon horns" loading="lazy"><figcaption data-i18n="part.dragon">Dragon</figcaption></figure>
-                    <figure><img src="images/parts/horns/tusk.png" alt="Tusk horns" loading="lazy"><figcaption data-i18n="part.tusk">Tusk</figcaption></figure>
-                    <figure><img src="images/parts/horns/reindeer.png" alt="Reindeer horns" loading="lazy"><figcaption data-i18n="part.reindeer">Reindeer</figcaption></figure>
-                    <figure><img src="images/parts/horns/spiky.png" alt="Spiky horns" loading="lazy"><figcaption data-i18n="part.spiky">Spiky</figcaption></figure>
-                    <figure><img src="images/parts/horns/unicorn.png" alt="Unicorn horn" loading="lazy"><figcaption data-i18n="part.unicorn">Unicorn</figcaption></figure>
-                </div>
-            </section>
-
-            <!-- ============================================================ -->
-            <!-- Page 8 : Changing Colors / Disable Parts (real HTML) -->
-            <!-- ============================================================ -->
-            <section class="section section--text" id="changing-colors" aria-labelledby="changing-colors-title">
-                <header class="section__header">
-                    <h2 id="changing-colors-title" class="section__title" data-i18n="section.changing-colors.title">Changing Colors</h2>
-                    <p class="section__intro" data-i18n="section.changing-colors.intro">Cute Flexi Maker lets you change the color of every element so your creation looks exactly the way you want.</p>
-                </header>
-
-                <div class="text-layout">
-                    <ol class="steps">
-                        <li><span class="steps__body" data-i18n="steps.1">Skin color changes the base color for the entire flexi.</span></li>
-                        <li><span class="steps__body" data-i18n="steps.2">To open the color menu, click the colored circle to the right of the category name.</span></li>
-                        <li><span class="steps__body" data-i18n="steps.3">For elements with multiple components, click the drop-down arrow to view all sub-components for that element.</span></li>
-                        <li><span class="steps__body" data-i18n="steps.4">Don't see the perfect color? Click the plus and select a custom color!</span></li>
-                    </ol>
-                    <figure class="text-layout__figure">
-                        <img src="images/page-08.png" alt="Screenshot of the Cute Flexi Maker color picker with numbered callouts." loading="lazy">
-                    </figure>
-                </div>
-            </section>
-
-            <section class="section section--text" id="disable-parts" aria-labelledby="disable-parts-title">
-                <header class="section__header">
-                    <h2 id="disable-parts-title" class="section__title" data-i18n="section.disable-parts.title">Disable Parts</h2>
-                    <p class="section__intro" data-i18n="section.disable-parts.intro">Select elements can be disabled to fine-tune the smallest details. When a component can be disabled, a toggle switch becomes available when that component is selected in the color-change menu.</p>
-                </header>
-
-                <ul class="disable-list">
-                    <li><span data-i18n="disable.appleLeaf">Apple leaf</span> <span class="disable-list__parent" data-i18n="disable.parent.apple">(apple)</span></li>
-                    <li><span data-i18n="disable.beakCere">Beak cere</span> <span class="disable-list__parent" data-i18n="disable.parent.parrotHead">(parrot head)</span></li>
-                    <li><span data-i18n="disable.bunnyEarsHeadbandIn">Bunny ears headband in</span> <span class="disable-list__parent" data-i18n="disable.parent.bunnyEarsHeadband">(bunny ears headband)</span></li>
-                    <li><span data-i18n="disable.catEarsIn">Cat ears in</span> <span class="disable-list__parent" data-i18n="disable.parent.catEars">(cat ears)</span></li>
-                    <li><span data-i18n="disable.eggPois">Egg pois</span> <span class="disable-list__parent" data-i18n="disable.parent.egg">(egg)</span></li>
-                    <li><span data-i18n="disable.eggStripes">Egg stripes</span> <span class="disable-list__parent" data-i18n="disable.parent.egg">(egg)</span></li>
-                    <li><span data-i18n="disable.elephantEarsIn">Elephant ears in</span> <span class="disable-list__parent" data-i18n="disable.parent.elephantEars">(elephant ears)</span></li>
-                    <li><span data-i18n="disable.eyeShine">Eye shine</span> <span class="disable-list__parent" data-i18n="disable.parent.longEyes">(long eyes)</span></li>
-                    <li><span data-i18n="disable.flowerCenter">Flower center</span> <span class="disable-list__parent" data-i18n="disable.parent.flower">(flower)</span></li>
-                    <li><span data-i18n="disable.flowerLeaves">Flower leaves</span> <span class="disable-list__parent" data-i18n="disable.parent.flower">(flower)</span></li>
-                    <li><span data-i18n="disable.hatBrim">Hat brim</span> <span class="disable-list__parent" data-i18n="disable.parent.cowboyHat">(cowboy hat)</span></li>
-                    <li><span data-i18n="disable.hatBrim">Hat brim</span> <span class="disable-list__parent" data-i18n="disable.parent.detectiveHat">(detective hat)</span></li>
-                    <li><span data-i18n="disable.hatStar">Hat star</span> <span class="disable-list__parent" data-i18n="disable.parent.cowboyHat">(cowboy hat)</span></li>
-                    <li><span data-i18n="disable.mouseEarsIn">Mouse ears in</span> <span class="disable-list__parent" data-i18n="disable.parent.mouseEars">(mouse ears)</span></li>
-                    <li><span data-i18n="disable.raptorClaws">Raptor claws</span> <span class="disable-list__parent" data-i18n="disable.parent.raptorLegs">(raptor legs)</span></li>
-                    <li><span data-i18n="disable.spines">Spines</span> <span class="disable-list__parent" data-i18n="disable.parent.dinoTail">(dino tail)</span></li>
-                    <li><span data-i18n="disable.strawberryLeaves">Strawberry leaves</span> <span class="disable-list__parent" data-i18n="disable.parent.strawberry">(strawberry)</span></li>
-                    <li><span data-i18n="disable.strawberrySeeds">Strawberry seeds</span> <span class="disable-list__parent" data-i18n="disable.parent.strawberry">(strawberry)</span></li>
-                    <li><span data-i18n="disable.trexTeeth">T-Rex teeth</span> <span class="disable-list__parent" data-i18n="disable.parent.trexHead">(t-rex head)</span></li>
-                    <li><span data-i18n="disable.wingsClaws">Wings claws</span> <span class="disable-list__parent" data-i18n="disable.parent.dragonWings">(dragon wings)</span></li>
-                </ul>
-            </section>
-        </article>
-
-        <section class="cta">
-            <h2 class="cta__title" data-i18n="cta.title">Want the printable version?</h2>
-            <p class="cta__lead" data-i18n="cta.lead">Grab the full PDF to keep the guide handy offline.</p>
-            <a class="btn btn--primary btn--large" href="parts-guide.pdf" download data-i18n="cta.button">Download PDF (8 pages)</a>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <p data-i18n="footer.brand">druckpunkt — Parts Guide · v1.0</p>
-        <p class="site-footer__small" data-i18n="footer.attribution">HTML edition rebuilt for the web. Original artwork LazyCoyote concept © their respective owners.</p>
-    </footer>
-
-    <button class="back-to-top" type="button" data-i18n-aria-label="btn.backToTop" aria-label="Back to top" hidden>↑</button>
-
-    <script src="js/main.js" defer></script>
+  <header><div><div class="brand">druck<span>punkt.</span> <small>Parts Guide v2.1</small></div><nav><a href="#catalog">Katalog</a><a href="#new">Neu</a><a href="#colors">Farben</a></nav></div></header>
+  <main>
+    <section class="hero"><div class="eyebrow">Version 2.1 · aktualisiert</div><h1>Cute Flexi Maker<br>Parts Guide</h1><p class="lead">Der vollständige Teilekatalog für kompatible Flexi-Figuren – jetzt mit Axolotl, Narwal, Bulldog, Französischer Bulldogge, Mops, Delfin und den neuen Teilen aus der aktuellen Originalseite.</p><div class="notice">Die Bilder werden in dieser Ausgabe direkt von der Originalquelle geladen. Für eine vollständig unabhängige GitHub-Pages-Version müssen die Assets anschließend in <code>images/parts/</code> gespiegelt werden.</div></section>
+    <section class="toc" id="catalog"><h2>Kategorien</h2><div class="toc-grid" id="toc"></div></section>
+    <div id="sections"></div>
+    <section class="guide-section" id="colors"><div class="section-head"><h2>Farben ändern</h2></div><p class="intro">Die Hautfarbe ändert die Grundfarbe des gesamten Flexis. Über den farbigen Kreis öffnest du die Farbauswahl; Unterkomponenten lassen sich über den Pfeil einblenden.</p></section>
+    <section class="guide-section" id="disable"><div class="section-head"><h2>Teile deaktivieren</h2></div><p class="intro">Einige Komponenten können im Farbmenü deaktiviert werden, darunter T-Rex-Zähne, Apfelblatt, Blütenblätter, Hutdetails, Drachenzähne und weitere Unterteile.</p></section>
+    <div class="footer">Referenz: <a href="https://www.printfarm.tools/cfm-parts-guide">printfarm.tools/cfm-parts-guide</a> · Die Originalgrafiken und das Cute-Flexi-Maker-Konzept gehören ihren jeweiligen Rechteinhabern.</div>
+  </main>
+  <script>
+    const base='https://www.printfarm.tools/cfm-parts-guide/';
+    const release='https://www.printfarm.tools/cfm-parts-guide/releases/2026-08-03/parts/';
+    const data=[
+      ['base-animals','Basistiere',['axolotl','bee','boar','bulldog','cat','caterpillar','dolphin','dragon','duck','eagle','elephant','french-bulldog','mouse','narwal','parrot','pig','pug','snail','t-rex'],['axolotl','narwal']],
+      ['heads','Köpfe',['base','bee','bulldog','chibi','dolphin','dragon','duck','elephant','parrot','pig','round','snail','t-rex'],['chibi']],
+      ['eyes','Augen',['base','big','black','color','cute','heart','long','reptile','sleep','smiley','x'],[]],
+      ['ears','Ohren',['big','cat','elephant','folded','mouse','pig'],[]],
+      ['hats','Hüte',['cowboy-hat','crown','detective-hat','party-hat','police-hat','sailor-hat','traffic-cone'],['party-hat','sailor-hat','traffic-cone']],
+      ['body-segments','Körpersegmente',['base','base-small','flex','fur'],[]],
+      ['bottom-segments','Untersegmente',['bee','flex','mini-flex','round','snail'],[]],
+      ['flexi-legs','Flexi-Beine',['angel','bird','dragon'],[]],
+      ['wings','Wings',['angel-wings','double','feathers','love-feathers','standard'],[]],
+      ['flexi-tails','Flexi-Schwänze',['dino','dolphin','dragon','feathered','pointed'],['pointed']],
+      ['legs','Beine',['bee','bird-legs','bird-wings','caterpillar','cute','dino','fins','dragon','duck','elephant','generic','pig','raptor','small','sploot','tiny-toes'],['tiny-toes']],
+      ['tails','Schwänze',['bird','cat','curly','dino','duck','mouse','round','sting','tufted'],[]],
+      ['accessories','Top-Accessoires',['apple','bird','bow','clover','crest','dragon-spikes','egg','fin','flower','heart','lifebuoy','paw','shell','spike','spines','sprout','star','strawberry','wavy-fin'],['wavy-fin']],
+      ['side-accessories','Side-Accessoires',['axolotl-gills','dragon-spikes'],['axolotl-gills']],
+      ['details','Details',['angry-eyelids','blaze','cheeks','eyebrows','eyelashes','furry-cheeks','moustache','piercing','pois','spots','stripes','tongue','x-butt-mark'],['spots','tongue']],
+      ['horns','Hörner',['antennae','dragon','reindeer','spiky','tusk','unicorn'],[]],
+      ['symbols','Symbole',['alphabet'],[]]
+    ];
+    const nice=s=>s.replace(/\.locked$/,'').replace(/(^|-)([a-z])/g,(_,a,b)=>(a?' ':'')+b.toUpperCase());
+    const asset=(section,name)=>{const rel=['axolotl','narwal','chibi','party-hat','sailor-hat','traffic-cone','pointed','tiny-toes','wavy-fin','axolotl-gills','spots','tongue'].includes(name);return (rel?release:base+'parts/')+section+'/'+name+'.png'};
+    const toc=document.querySelector('#toc'),out=document.querySelector('#sections');
+    data.forEach(([id,title,names,newNames],i)=>{toc.insertAdjacentHTML('beforeend',`<a href="#${id}">${String(i+1).padStart(2,'0')} · ${title}</a>`);const cards=names.map(n=>`<article class="card">${newNames.includes(n)?'<span class="new">NEU</span>':''}<img loading="lazy" src="${asset(id,n)}" alt="${nice(n)}"><p>${nice(n)}</p></article>`).join('');out.insertAdjacentHTML('beforeend',`<section class="guide-section" id="${id}"><div class="section-head"><h2>${title}</h2><span class="count">${names.length} Teile</span></div><div class="cards">${cards}</div></section>`)});
+  </script>
 </body>
 </html>
