@@ -1,6 +1,13 @@
 # Cute Flexi Maker — Parts Guide (HTML edition)
 
-Static HTML version of the **Cute Flexi Maker Parts Guide** (v1.0), originally a Canva design / PDF. Built to be hosted on GitHub Pages so the guide is browsable online without downloading the PDF.
+Static HTML version of the **Cute Flexi Maker Parts Guide**. The current catalog is based on version **2.1** of the original Parts Guide and is designed for GitHub Pages as well as Shopify.
+
+## Current status
+
+- `index.html` contains the v2.1 catalog with the newer animals, heads, ears, hats, wings, flexi tails, legs, accessories and details.
+- The v2.1 HTML currently loads the new part images from `printfarm.tools`. This keeps the repository small, but GitHub Pages depends on that external image source.
+- For a fully independent deployment, mirror the referenced PNG files into `images/parts/` and change the `asset()` function in `index.html` to use local paths.
+- `page.parts-guide.liquid` is the Shopify template version. Upload it as `templates/page.part-guide.liquid` and preview it in an unpublished theme before publishing.
 
 ## Source
 
@@ -71,14 +78,33 @@ python3 scripts/extract_parts.py
 
 The script keeps a `manifest.json` you can use to drive further work — for example, swapping label rendering, adding tags, or generating filter UI.
 
+## Making the image source independent
+
+The v2.1 build currently distinguishes between existing images and newly added release images, all served from `printfarm.tools`. To make GitHub Pages independent, download every image referenced by the v2.1 data array, preserve the category and filename structure below `images/parts/`, then replace the `asset()` function in `index.html` with:
+
+```js
+const asset = (section, name) => `images/parts/${section}/${name}.png`;
+```
+
+Afterward run `python3 -m http.server 8000` locally and check the browser network panel for missing images.
+
 ## Deploying to GitHub Pages
 
-1. Create a new repository on GitHub.
-2. Copy the contents of this folder into the repo root and push to `main`.
-3. In **Settings → Pages**, set source to "Deploy from a branch" → branch `main`, folder `/ (root)`.
-4. Wait a minute, then visit the URL shown on that page.
+1. Push the repository branch containing the updated `index.html`.
+2. In **Settings → Pages**, set source to "Deploy from a branch" → the selected branch, folder `/ (root)`.
+3. Wait a minute, then visit the URL shown on that page.
 
 Custom domain? Add a `CNAME` file with your domain and configure DNS as per GitHub's docs.
+
+## Shopify installation
+
+The Shopify page `/pages/parts-guide` uses the template suffix `part-guide`. The matching file is therefore:
+
+```text
+templates/page.part-guide.liquid
+```
+
+Upload the Liquid file to a new unpublished theme, open that theme's preview, and test `/pages/parts-guide` there. The normal live-shop URL continues to render the published theme. Publish the test theme only after the preview is correct.
 
 ## Local preview
 
