@@ -384,10 +384,10 @@
       <div class="dp-pg-section-label">Kategorie 05</div>
       <div class="dp-pg-section-head"><h2>Hüte</h2><span class="dp-pg-count">7 Stile</span></div>
       <div class="dp-pg-grid">
-        {% assign dp_items = 'cowboy-hat,Cowboy|crown,Krone|detective-hat,Detektiv|party-hat,Partyhut|police-hat.locked,Polizeimütze|sailor-hat,Matrosenmütze|traffic-cone,Verkehrskegel' | split: '|' %}
+        {% assign dp_items = 'cowboy-hat,Cowboy|crown,Krone|detective-hat,Detektiv|party-hat,Partyhut|police-hat,Polizeimütze|sailor-hat,Matrosenmütze|traffic-cone,Verkehrskegel' | split: '|' %}
         {% for item in dp_items %}
           {% assign parts = item | split: ',' %}
-          <div class="dp-pg-card{% if parts[0] == 'party-hat' or parts[0] == 'police-hat' or parts[0] == 'police-hat.locked' or parts[0] == 'sailor-hat' or parts[0] == 'traffic-cone' %} dp-pg-new{% endif %}">
+          <div class="dp-pg-card{% if parts[0] == 'party-hat' or parts[0] == 'police-hat' or parts[0] == 'sailor-hat' or parts[0] == 'traffic-cone' %} dp-pg-new{% endif %}">
             <div class="dp-pg-card-img">
               <img src="{{ dp_pg_site_base }}/images/parts/hats/{{ parts[0] }}.png" alt="{{ parts[1] }}" width="530" height="530" loading="lazy">
             </div>

@@ -172,7 +172,7 @@ SECTIONS = [
     dict(kat="02", anchor="heads", folder="heads", title="Köpfe", word="Köpfe", desc="Wähle einen Kopf.", notes=[], new={"bulldog","chibi","dolphin"}, order=["base","bee","bulldog","chibi","dolphin","dragon","duck","elephant","parrot","pig","round","snail","t-rex"]),
     dict(kat="03", anchor="eyes", folder="eyes", title="Augen", word="Stile", desc="Verleihe deinem Flexi Ausdruck.", notes=[], new=set(), order=["base","big","black","color","cute","heart","long","reptile","sleep","smiley","x"]),
     dict(kat="04", anchor="ears", folder="ears", title="Ohren", word="Stile", desc="", notes=[], new={"big","folded"}, order=["big","cat","elephant","folded","mouse","pig"]),
-    dict(kat="05", anchor="hats", folder="hats", title="Hüte", word="Stile", desc="", notes=[], new={"party-hat","police-hat","police-hat.locked","sailor-hat","traffic-cone"}, order=["cowboy-hat","crown","detective-hat","party-hat","police-hat.locked","sailor-hat","traffic-cone"]),
+    dict(kat="05", anchor="hats", folder="hats", title="Hüte", word="Stile", desc="", notes=[], new={"party-hat","police-hat","sailor-hat","traffic-cone"}, order=["cowboy-hat","crown","detective-hat","party-hat","police-hat","sailor-hat","traffic-cone"]),
     dict(kat="06", anchor="body-segments", folder="body-segments", title="Körpersegmente", word="Stile", desc="", notes=[], new=set(), order=["base","base-small","flex","fur"]),
     dict(kat="07", anchor="bottom-segs", folder="bottom-segments", title="Untersegmente", word="Stile", desc="", notes=[], new=set(), order=["bee","flex","mini-flex","round","snail"]),
     dict(kat="08", anchor="flexi-legs", folder="flexi-legs", title="Flexi-Beine (Flügel)", word="Stile", desc="", notes=[], new=set(), order=["angel","bird","dragon"]),
