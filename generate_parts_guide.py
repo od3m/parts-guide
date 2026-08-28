@@ -47,8 +47,8 @@ SITE_BASE = "https://od3m.github.io/parts-guide"
 #   Alternative (Shopify-CDN-Ordner, falls du die Bilder dort hochlädst):
 #   SITE_BASE = "https://cdn.shopify.com/s/files/1/0990/0903/6672/files"
 
-# PDF liegt auf dem Shopify-CDN (unverändert übernommen)
-PDF_URL = "https://cdn.shopify.com/s/files/1/0990/0903/6672/files/druckpunkt-parts-guide.pdf?v=1778936378"
+# Aktuelle v2.1-PDF auf dem Shopify-CDN
+PDF_URL = "https://cdn.shopify.com/s/files/1/0990/0903/6672/files/druckpunkt-parts-guide.pdf?v=1787936411"
 
 # ─────────────────────────────────────────────────────────────────────────
 #  DEUTSCHE LABELS  (slug -> Label).  Neue Teile hier ergänzen.
@@ -61,30 +61,40 @@ LABELS = {
     "mouse": "Maus", "parrot": "Papagei", "pig": "Schwein", "snail": "Schnecke",
     "t-rex": "T-Rex", "dino": "Dino", "bird": "Vogel", "raptor": "Raptor",
     "generic": "Generisch", "round": "Rund", "base": "Basis", "small": "Klein",
+    "axolotl": "Axolotl", "bulldog": "Bulldog", "dolphin": "Delfin",
+    "french-bulldog": "Französische Bulldogge", "narwal": "Narwal", "pug": "Mops",
+    "chibi": "Chibi", "folded": "Gefaltet",
     # Augen
     "big": "Groß", "black": "Schwarz", "color": "Farbe", "cute": "Süß",
     "heart": "Herz", "long": "Lang", "reptile": "Reptil", "sleep": "Schlaf",
     "smiley": "Smiley", "x": "X",
     # Hüte
-    "cowboy": "Cowboy", "detective": "Detektiv",
+    "cowboy": "Cowboy", "cowboy-hat": "Cowboy", "detective": "Detektiv", "detective-hat": "Detektiv",
+    "party-hat": "Partyhut", "police-hat": "Polizeimütze", "police-hat.locked": "Polizeimütze",
+    "sailor-hat": "Matrosenmütze", "traffic-cone": "Verkehrskegel",
     # Körper-/Untersegmente
     "base-small": "Basis Klein", "fur": "Fell", "flex": "Flex",
     "mini-flex": "Mini Flex",
     # Flexi
-    "angel": "Engel", "feathered": "Gefiedert",
+    "angel": "Engel", "feathered": "Gefiedert", "angel-wings": "Engelsflügel",
+    "double": "Doppelt", "feathers": "Federn", "love-feathers": "Herzfedern", "standard": "Standard",
     # Schwänze
-    "tufted": "Gebüschelt", "sting": "Stachel",
+    "tufted": "Gebüschelt", "sting": "Stachel", "curly": "Lockig", "pointed": "Spitz",
+    "bird-legs": "Vogelbeine", "bird-wings": "Vogelflügel", "fins": "Flossen",
+    "sploot": "Sploot", "tiny-toes": "Kleine Zehen",
     # Accessoires
     "apple": "Apfel", "bow": "Schleife", "bunny-ears": "Hasenohren",
     "clover": "Klee", "crest": "Kamm", "crown": "Krone", "egg": "Ei",
     "flower": "Blume", "paw": "Pfote", "shell": "Muschel", "spike": "Spike",
     "spines": "Stacheln", "sprout": "Spross", "star": "Stern",
-    "strawberry": "Erdbeere",
+    "strawberry": "Erdbeere", "dragon-spikes": "Drachenspitzen", "fin": "Flosse",
+    "lifebuoy": "Rettungsring", "wavy-fin": "Wellige Flosse", "axolotl-gills": "Axolotl-Kiemen",
     # Details
     "angry-eyelids": "Wütende Lider", "cheeks": "Wangen",
     "scales-top": "Schuppen Oben", "scales-side": "Schuppen Seite",
     "eyelashes": "Wimpern", "furry-cheeks": "Pelzwangen",
-    "moustache": "Schnurrbart", "pois": "Punkte", "stripes": "Streifen",
+    "moustache": "Schnurrbart", "pois": "Punkte", "stripes": "Streifen", "blaze": "Blesse",
+    "eyebrows": "Augenbrauen", "piercing": "Piercing", "spots": "Flecken", "tongue": "Zunge", "x-butt-mark": "X-Po-Marke",
     # Hörner
     "antennae": "Antennen", "tusk": "Stoßzahn", "reindeer": "Rentier",
     "spiky": "Stachelig", "unicorn": "Einhorn",
@@ -156,6 +166,26 @@ SECTIONS = [
          order=["antennae","dragon","tusk","reindeer","spiky","unicorn"]),
 ]
 
+# v2.1 override: aktuelle Kategorien und Reihenfolge aus dem Parts Guide.
+SECTIONS = [
+    dict(kat="01", anchor="base-animals", folder="base-animals", title="Basistiere", word="Tiere", desc="Starte mit einem Basistier.", notes=[], new={"axolotl","bulldog","dolphin","french-bulldog","narwal","pug"}, order=["axolotl","bee","boar","bulldog","cat","caterpillar","dolphin","dragon","duck","eagle","elephant","french-bulldog","mouse","narwal","parrot","pig","pug","snail","t-rex"]),
+    dict(kat="02", anchor="heads", folder="heads", title="Köpfe", word="Köpfe", desc="Wähle einen Kopf.", notes=[], new={"bulldog","chibi","dolphin"}, order=["base","bee","bulldog","chibi","dolphin","dragon","duck","elephant","parrot","pig","round","snail","t-rex"]),
+    dict(kat="03", anchor="eyes", folder="eyes", title="Augen", word="Stile", desc="Verleihe deinem Flexi Ausdruck.", notes=[], new=set(), order=["base","big","black","color","cute","heart","long","reptile","sleep","smiley","x"]),
+    dict(kat="04", anchor="ears", folder="ears", title="Ohren", word="Stile", desc="", notes=[], new={"big","folded"}, order=["big","cat","elephant","folded","mouse","pig"]),
+    dict(kat="05", anchor="hats", folder="hats", title="Hüte", word="Stile", desc="", notes=[], new={"party-hat","police-hat","police-hat.locked","sailor-hat","traffic-cone"}, order=["cowboy-hat","crown","detective-hat","party-hat","police-hat.locked","sailor-hat","traffic-cone"]),
+    dict(kat="06", anchor="body-segments", folder="body-segments", title="Körpersegmente", word="Stile", desc="", notes=[], new=set(), order=["base","base-small","flex","fur"]),
+    dict(kat="07", anchor="bottom-segs", folder="bottom-segments", title="Untersegmente", word="Stile", desc="", notes=[], new=set(), order=["bee","flex","mini-flex","round","snail"]),
+    dict(kat="08", anchor="flexi-legs", folder="flexi-legs", title="Flexi-Beine (Flügel)", word="Stile", desc="", notes=[], new=set(), order=["angel","bird","dragon"]),
+    dict(kat="09", anchor="wings", folder="wings", title="Wings", word="Stile", desc="", notes=[], new={"angel-wings","double","feathers","love-feathers","standard"}, order=["angel-wings","double","feathers","love-feathers","standard"]),
+    dict(kat="10", anchor="flexi-tails", folder="flexi-tails", title="Flexi-Schwänze", word="Stile", desc="", notes=[], new={"dolphin","pointed"}, order=["dino","dolphin","dragon","feathered","pointed"]),
+    dict(kat="11", anchor="legs", folder="legs", title="Beine", word="Stile", desc="", notes=["Beine werden, sofern verfügbar, angezeigt"], new={"bird-legs","bird-wings","fins","sploot","tiny-toes"}, order=["bee","bird-legs","bird-wings","caterpillar","cute","dino","fins","dragon","duck","elephant","generic","pig","raptor","small","sploot","tiny-toes"]),
+    dict(kat="12", anchor="tails", folder="tails", title="Schwänze", word="Stile", desc="", notes=[], new={"curly"}, order=["bird","cat","curly","dino","duck","mouse","round","sting","tufted"]),
+    dict(kat="13", anchor="accessories", folder="accessories", title="Top-Accessoires", word="Stile", desc="Accessoires werden, sofern verfügbar, angezeigt.", notes=[], new={"dragon-spikes","fin","lifebuoy","wavy-fin"}, order=["apple","bird","bow","clover","crest","dragon-spikes","egg","fin","flower","heart","lifebuoy","paw","shell","spike","spines","sprout","star","strawberry","wavy-fin"]),
+    dict(kat="14", anchor="side-accessories", folder="side-accessories", title="Side-Accessoires", word="Stile", desc="", notes=[], new={"axolotl-gills"}, order=["axolotl-gills","dragon-spikes"]),
+    dict(kat="15", anchor="details", folder="details", title="Details", word="Stile", desc="", notes=["Details werden, sofern verfügbar, angezeigt"], new={"blaze","eyebrows","piercing","spots","tongue","x-butt-mark"}, order=["angry-eyelids","blaze","cheeks","eyebrows","eyelashes","furry-cheeks","moustache","piercing","pois","spots","stripes","tongue","x-butt-mark"]),
+    dict(kat="16", anchor="horns", folder="horns", title="Hörner", word="Stile", desc="Kröne deinen Flexi mit Hörnern, Antennen oder einem Einhornhorn.", notes=[], new=set(), order=["antennae","dragon","reindeer","spiky","tusk","unicorn"]),
+]
+
 # Inhaltsverzeichnis (vollständig, inkl. der statischen Sektionen)
 TOC = [
     ("01","base-animals","Basistiere"), ("02","heads","Köpfe"), ("03","eyes","Augen"),
@@ -166,9 +196,25 @@ TOC = [
     ("15","horns","Hörner"), ("16","colors","Farben ändern"), ("17","disable","Teile deaktivieren"),
 ]
 
+# TOC v2.1: Wings und Side-Accessoires sind eigene Kategorien.
+TOC = [
+    ("01","base-animals","Basistiere"), ("02","heads","Köpfe"), ("03","eyes","Augen"),
+    ("04","ears","Ohren"), ("05","hats","Hüte"), ("06","body-segments","Körpersegmente"),
+    ("07","bottom-segs","Untersegmente"), ("08","flexi-legs","Flexi-Beine (Flügel)"),
+    ("09","wings","Wings"), ("10","flexi-tails","Flexi-Schwänze"), ("11","legs","Beine"),
+    ("12","tails","Schwänze"), ("13","accessories","Top-Accessoires"),
+    ("14","side-accessories","Side-Accessoires"), ("15","symbols","Symbole"),
+    ("16","details","Details"), ("17","horns","Hörner"), ("18","colors","Farben ändern"),
+    ("19","disable","Teile deaktivieren"),
+]
+
 # ─────────────────────────────────────────────────────────────────────────
 #  Abgleich Ordner <-> kuratierte Reihenfolge  (Drift-Erkennung)
 # ─────────────────────────────────────────────────────────────────────────
+# Der v2.1-Katalog ist kuratiert. Legacy-Dateien aus der alten PDF werden nicht
+# automatisch in die neue Ausgabe aufgenommen.
+CURATED_CATALOG = True
+
 def reconcile(sec, report):
     folder = os.path.join(REPO_ROOT, "images", "parts", sec["folder"])
     if not os.path.isdir(folder):
@@ -181,7 +227,7 @@ def reconcile(sec, report):
 
     kept    = [s for s in known if s in disk_set]          # bekannte, weiter vorhanden
     removed = [s for s in known if s not in disk_set]      # im Original entfernt
-    added   = sorted(s for s in on_disk if s not in known_set)  # neu im Original
+    added   = [] if CURATED_CATALOG else sorted(s for s in on_disk if s not in known_set)
 
     ordered = kept + added
     if removed:
@@ -531,7 +577,7 @@ WRAPPER_OPEN = '\n<div class="dp-pg-wrapper">\n\n'
 
 HERO = """  <!-- ══════════════════ HERO ══════════════════ -->
   <section class="dp-pg-hero">
-    <span class="dp-pg-eyebrow">Cute Flexi Maker · v1.0</span>
+    <span class="dp-pg-eyebrow">Cute Flexi Maker · v2.1</span>
     <h1>Teile-<em>Übersicht</em></h1>
     <p class="dp-pg-hero-sub">
       Alle verfügbaren Teile für deinen individuellen Flexi. Starte mit einem Basistier
@@ -565,42 +611,34 @@ TOC_CLOSE = """
 
 """
 
-SYMBOLS_BLOCK = """  <!-- ══════════════════ 13 SYMBOLE ══════════════════ -->
+SYMBOLS_BLOCK = """  <!-- ══════════════════ 15 SYMBOLE ══════════════════ -->
   <section class="dp-pg-section" id="dp-pg-symbols">
     <div class="dp-pg-container">
-      <div class="dp-pg-section-label">Kategorie 13</div>
+      <div class="dp-pg-section-label">Kategorie 15</div>
       <div class="dp-pg-section-head"><h2>Symbole</h2></div>
-      <p class="dp-pg-section-desc">Symbole werden, sofern verfügbar, angezeigt.</p>
-      <div style="margin-bottom:1.25rem">
-        <img
-          src="{{ dp_pg_site_base }}/images/parts/symbols/alphabet.png"
-          alt="Alphabet-Vorschau"
-          width="480" height="480"
-          style="height:72px;object-fit:contain;border-radius:6px;border:1px solid var(--dp-pg-border)"
-        >
-      </div>
+      <p class="dp-pg-section-desc">Buchstaben, Zahlen und Sonderzeichen für individuelle Beschriftungen.</p>
       <div class="dp-pg-symbols">
         <div class="dp-pg-symbol-group">
           <h3>Buchstaben</h3>
-          <p>a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+          <p>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>Ä Å Æ Ñ Ö Ø Ü</p>
         </div>
         <div class="dp-pg-symbol-group">
           <h3>Zahlen</h3>
           <p>0 1 2 3 4 5 6 7 8 9</p>
         </div>
         <div class="dp-pg-symbol-group">
-          <h3>Sonstige</h3>
-          <p>&amp; @ ! + ?</p>
+          <h3>Sonderzeichen</h3>
+          <p>&amp; @ ! + ? -</p>
         </div>
       </div>
     </div>
   </section>
 """
 
-COLORS_BLOCK = """  <!-- ══════════════════ 16 FARBEN ÄNDERN ══════════════════ -->
+COLORS_BLOCK = """  <!-- ══════════════════ 18 FARBEN ÄNDERN ══════════════════ -->
   <section class="dp-pg-section" id="dp-pg-colors">
     <div class="dp-pg-container">
-      <div class="dp-pg-section-label">Kategorie 16</div>
+      <div class="dp-pg-section-label">Kategorie 18</div>
       <div class="dp-pg-section-head"><h2>Farben ändern</h2></div>
       <p class="dp-pg-section-desc">Cute Flexi Maker lässt dich die Farbe jedes Elements anpassen — so sieht deine Kreation genau so aus, wie du es dir vorstellst.</p>
       <div class="dp-pg-tutorial">
@@ -622,10 +660,10 @@ COLORS_BLOCK = """  <!-- ══════════════════ 
   </section>
 """
 
-DISABLE_BLOCK = """  <!-- ══════════════════ 17 TEILE DEAKTIVIEREN ══════════════════ -->
+DISABLE_BLOCK = """  <!-- ══════════════════ 19 TEILE DEAKTIVIEREN ══════════════════ -->
   <section class="dp-pg-section" id="dp-pg-disable">
     <div class="dp-pg-container">
-      <div class="dp-pg-section-label">Kategorie 17</div>
+      <div class="dp-pg-section-label">Kategorie 19</div>
       <div class="dp-pg-section-head"><h2>Teile deaktivieren</h2></div>
       <p class="dp-pg-section-desc">Bestimmte Elemente können deaktiviert werden, um die kleinsten Details zu verfeinern. Wenn eine Komponente deaktiviert werden kann, erscheint ein Schalter im Farbmenü.</p>
       <div class="dp-pg-disable-grid">
@@ -658,9 +696,9 @@ CTA_BLOCK = """  <!-- ══════════════════ CTA
   <div class="dp-pg-container">
     <div class="dp-pg-cta">
       <h2>Druckfertige Version herunterladen</h2>
-      <p>Alle Teile auf 10 Seiten — jederzeit griffbereit, auch offline.</p>
+      <p>Alle Teile auf 21 Seiten — jederzeit griffbereit, auch offline.</p>
       <a href="{{ dp_pg_pdf_url }}" class="dp-pg-btn dp-pg-btn-primary" style="font-size:1rem;padding:12px 28px" download>
-        ↓ PDF herunterladen (10 Seiten)
+        ↓ PDF herunterladen (21 Seiten)
       </a>
     </div>
   </div>

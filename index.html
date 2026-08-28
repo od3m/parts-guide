@@ -22,7 +22,7 @@
 <body>
   <header><div><div class="brand">druck<span>punkt.</span> <small>Parts Guide v2.1</small></div><nav><a href="#catalog">Katalog</a><a href="#new">Neu</a><a href="#colors">Farben</a></nav></div></header>
   <main>
-    <section class="hero"><div class="eyebrow">Version 2.1 · aktualisiert</div><h1>Cute Flexi Maker<br>Parts Guide</h1><p class="lead">Der vollständige Teilekatalog für kompatible Flexi-Figuren – jetzt mit Axolotl, Narwal, Bulldog, Französischer Bulldogge, Mops, Delfin und den neuen Teilen aus der aktuellen Originalseite.</p><div class="notice">Die Bilder werden in dieser Ausgabe direkt von der Originalquelle geladen. Für eine vollständig unabhängige GitHub-Pages-Version müssen die Assets anschließend in <code>images/parts/</code> gespiegelt werden.</div></section>
+    <section class="hero"><div class="eyebrow">Version 2.1 · aktualisiert</div><h1>Cute Flexi Maker<br>Parts Guide</h1><p class="lead">Der vollständige Teilekatalog für kompatible Flexi-Figuren – jetzt mit Axolotl, Narwal, Bulldog, Französischer Bulldogge, Mops, Delfin und den neuen Teilen aus der aktuellen Originalseite.</p><div class="notice">Die Bild-Assets dieser Ausgabe liegen lokal im Repository unter <code>images/parts/</code> und funktionieren dadurch unabhängig von der Originalquelle.</div></section>
     <section class="toc" id="catalog"><h2>Kategorien</h2><div class="toc-grid" id="toc"></div></section>
     <div id="sections"></div>
     <section class="guide-section" id="colors"><div class="section-head"><h2>Farben ändern</h2></div><p class="intro">Die Hautfarbe ändert die Grundfarbe des gesamten Flexis. Über den farbigen Kreis öffnest du die Farbauswahl; Unterkomponenten lassen sich über den Pfeil einblenden.</p></section>
@@ -30,8 +30,6 @@
     <div class="footer">Referenz: <a href="https://www.printfarm.tools/cfm-parts-guide">printfarm.tools/cfm-parts-guide</a> · Die Originalgrafiken und das Cute-Flexi-Maker-Konzept gehören ihren jeweiligen Rechteinhabern.</div>
   </main>
   <script>
-    const base='https://www.printfarm.tools/cfm-parts-guide/';
-    const release='https://www.printfarm.tools/cfm-parts-guide/releases/2026-08-03/parts/';
     const data=[
       ['base-animals','Basistiere',['axolotl','bee','boar','bulldog','cat','caterpillar','dolphin','dragon','duck','eagle','elephant','french-bulldog','mouse','narwal','parrot','pig','pug','snail','t-rex'],['axolotl','narwal']],
       ['heads','Köpfe',['base','bee','bulldog','chibi','dolphin','dragon','duck','elephant','parrot','pig','round','snail','t-rex'],['chibi']],
@@ -52,7 +50,7 @@
       ['symbols','Symbole',['alphabet'],[]]
     ];
     const nice=s=>s.replace(/\.locked$/,'').replace(/(^|-)([a-z])/g,(_,a,b)=>(a?' ':'')+b.toUpperCase());
-    const asset=(section,name)=>{const rel=['axolotl','narwal','chibi','party-hat','sailor-hat','traffic-cone','pointed','tiny-toes','wavy-fin','axolotl-gills','spots','tongue'].includes(name);return (rel?release:base+'parts/')+section+'/'+name+'.png'};
+    const asset=(section,name)=>`images/parts/${section}/${name}.png`;
     const toc=document.querySelector('#toc'),out=document.querySelector('#sections');
     data.forEach(([id,title,names,newNames],i)=>{toc.insertAdjacentHTML('beforeend',`<a href="#${id}">${String(i+1).padStart(2,'0')} · ${title}</a>`);const cards=names.map(n=>`<article class="card">${newNames.includes(n)?'<span class="new">NEU</span>':''}<img loading="lazy" src="${asset(id,n)}" alt="${nice(n)}"><p>${nice(n)}</p></article>`).join('');out.insertAdjacentHTML('beforeend',`<section class="guide-section" id="${id}"><div class="section-head"><h2>${title}</h2><span class="count">${names.length} Teile</span></div><div class="cards">${cards}</div></section>`)});
   </script>

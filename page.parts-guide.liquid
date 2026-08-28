@@ -12,7 +12,7 @@
 {% endcomment %}
 
 {% assign dp_pg_site_base = "https://od3m.github.io/parts-guide" %}
-{% assign dp_pg_pdf_url = "https://cdn.shopify.com/s/files/1/0990/0903/6672/files/druckpunkt-parts-guide.pdf?v=1778936378" %}
+{% assign dp_pg_pdf_url = "https://cdn.shopify.com/s/files/1/0990/0903/6672/files/druckpunkt-parts-guide.pdf?v=1787936411" %}
 
 {% # theme-check-disable RemoteAsset %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -248,7 +248,7 @@
 
   <!-- ══════════════════ HERO ══════════════════ -->
   <section class="dp-pg-hero">
-    <span class="dp-pg-eyebrow">Cute Flexi Maker · v1.0</span>
+    <span class="dp-pg-eyebrow">Cute Flexi Maker · v2.1</span>
     <h1>Teile-<em>Übersicht</em></h1>
     <p class="dp-pg-hero-sub">
       Alle verfügbaren Teile für deinen individuellen Flexi. Starte mit einem Basistier
@@ -280,15 +280,17 @@
         <a href="#dp-pg-body-segments"  class="dp-pg-toc-item"><span class="dp-pg-toc-num">06</span>Körpersegmente</a>
         <a href="#dp-pg-bottom-segs"    class="dp-pg-toc-item"><span class="dp-pg-toc-num">07</span>Untersegmente</a>
         <a href="#dp-pg-flexi-legs"     class="dp-pg-toc-item"><span class="dp-pg-toc-num">08</span>Flexi-Beine (Flügel)</a>
-        <a href="#dp-pg-flexi-tails"    class="dp-pg-toc-item"><span class="dp-pg-toc-num">09</span>Flexi-Schwänze</a>
-        <a href="#dp-pg-legs"           class="dp-pg-toc-item"><span class="dp-pg-toc-num">10</span>Beine</a>
-        <a href="#dp-pg-tails"          class="dp-pg-toc-item"><span class="dp-pg-toc-num">11</span>Schwänze</a>
-        <a href="#dp-pg-accessories"    class="dp-pg-toc-item"><span class="dp-pg-toc-num">12</span>Accessoires</a>
-        <a href="#dp-pg-symbols"        class="dp-pg-toc-item"><span class="dp-pg-toc-num">13</span>Symbole</a>
-        <a href="#dp-pg-details"        class="dp-pg-toc-item"><span class="dp-pg-toc-num">14</span>Details</a>
-        <a href="#dp-pg-horns"          class="dp-pg-toc-item"><span class="dp-pg-toc-num">15</span>Hörner</a>
-        <a href="#dp-pg-colors"         class="dp-pg-toc-item"><span class="dp-pg-toc-num">16</span>Farben ändern</a>
-        <a href="#dp-pg-disable"        class="dp-pg-toc-item"><span class="dp-pg-toc-num">17</span>Teile deaktivieren</a>
+        <a href="#dp-pg-wings"          class="dp-pg-toc-item"><span class="dp-pg-toc-num">09</span>Wings</a>
+        <a href="#dp-pg-flexi-tails"    class="dp-pg-toc-item"><span class="dp-pg-toc-num">10</span>Flexi-Schwänze</a>
+        <a href="#dp-pg-legs"           class="dp-pg-toc-item"><span class="dp-pg-toc-num">11</span>Beine</a>
+        <a href="#dp-pg-tails"          class="dp-pg-toc-item"><span class="dp-pg-toc-num">12</span>Schwänze</a>
+        <a href="#dp-pg-accessories"    class="dp-pg-toc-item"><span class="dp-pg-toc-num">13</span>Top-Accessoires</a>
+        <a href="#dp-pg-side-accessories" class="dp-pg-toc-item"><span class="dp-pg-toc-num">14</span>Side-Accessoires</a>
+        <a href="#dp-pg-symbols"        class="dp-pg-toc-item"><span class="dp-pg-toc-num">15</span>Symbole</a>
+        <a href="#dp-pg-details"        class="dp-pg-toc-item"><span class="dp-pg-toc-num">16</span>Details</a>
+        <a href="#dp-pg-horns"          class="dp-pg-toc-item"><span class="dp-pg-toc-num">17</span>Hörner</a>
+        <a href="#dp-pg-colors"         class="dp-pg-toc-item"><span class="dp-pg-toc-num">18</span>Farben ändern</a>
+        <a href="#dp-pg-disable"        class="dp-pg-toc-item"><span class="dp-pg-toc-num">19</span>Teile deaktivieren</a>
       </div>
     </div>
   </section>
@@ -297,13 +299,13 @@
   <section class="dp-pg-section" id="dp-pg-base-animals">
     <div class="dp-pg-container">
       <div class="dp-pg-section-label">Kategorie 01</div>
-      <div class="dp-pg-section-head"><h2>Basistiere</h2><span class="dp-pg-count">13 Tiere</span></div>
-      <p class="dp-pg-section-desc">Starte mit einem Basistier. Der Drache ist die neueste Ergänzung.</p>
+      <div class="dp-pg-section-head"><h2>Basistiere</h2><span class="dp-pg-count">19 Tiere</span></div>
+      <p class="dp-pg-section-desc">Starte mit einem Basistier.</p>
       <div class="dp-pg-grid">
-        {% assign dp_items = 'bee,Biene|boar,Eber|cat,Katze|caterpillar,Raupe|duck,Ente|dragon,Drache|eagle,Adler|elephant,Elefant|mouse,Maus|parrot,Papagei|pig,Schwein|snail,Schnecke|t-rex,T-Rex' | split: '|' %}
+        {% assign dp_items = 'axolotl,Axolotl|bee,Biene|boar,Eber|bulldog,Bulldog|cat,Katze|caterpillar,Raupe|dolphin,Delfin|dragon,Drache|duck,Ente|eagle,Adler|elephant,Elefant|french-bulldog,Französische Bulldogge|mouse,Maus|narwal,Narwal|parrot,Papagei|pig,Schwein|pug,Mops|snail,Schnecke|t-rex,T-Rex' | split: '|' %}
         {% for item in dp_items %}
           {% assign parts = item | split: ',' %}
-          <div class="dp-pg-card{% if parts[0] == 'dragon' %} dp-pg-new{% endif %}">
+          <div class="dp-pg-card{% if parts[0] == 'axolotl' or parts[0] == 'bulldog' or parts[0] == 'dolphin' or parts[0] == 'french-bulldog' or parts[0] == 'narwal' or parts[0] == 'pug' %} dp-pg-new{% endif %}">
             <div class="dp-pg-card-img">
               <img src="{{ dp_pg_site_base }}/images/parts/base-animals/{{ parts[0] }}.png" alt="{{ parts[1] }}" width="530" height="530" loading="lazy">
             </div>
@@ -318,13 +320,13 @@
   <section class="dp-pg-section" id="dp-pg-heads">
     <div class="dp-pg-container">
       <div class="dp-pg-section-label">Kategorie 02</div>
-      <div class="dp-pg-section-head"><h2>Köpfe</h2><span class="dp-pg-count">10 Köpfe</span></div>
-      <p class="dp-pg-section-desc">Wähle einen Kopf, um die Persönlichkeit deines Flexis festzulegen.</p>
+      <div class="dp-pg-section-head"><h2>Köpfe</h2><span class="dp-pg-count">13 Köpfe</span></div>
+      <p class="dp-pg-section-desc">Wähle einen Kopf.</p>
       <div class="dp-pg-grid">
-        {% assign dp_items = 'base,Basis|bee,Biene|dragon,Drache|duck,Ente|elephant,Elefant|parrot,Papagei|pig,Schwein|round,Rund|snail,Schnecke|t-rex,T-Rex' | split: '|' %}
+        {% assign dp_items = 'base,Basis|bee,Biene|bulldog,Bulldog|chibi,Chibi|dolphin,Delfin|dragon,Drache|duck,Ente|elephant,Elefant|parrot,Papagei|pig,Schwein|round,Rund|snail,Schnecke|t-rex,T-Rex' | split: '|' %}
         {% for item in dp_items %}
           {% assign parts = item | split: ',' %}
-          <div class="dp-pg-card">
+          <div class="dp-pg-card{% if parts[0] == 'bulldog' or parts[0] == 'chibi' or parts[0] == 'dolphin' %} dp-pg-new{% endif %}">
             <div class="dp-pg-card-img">
               <img src="{{ dp_pg_site_base }}/images/parts/heads/{{ parts[0] }}.png" alt="{{ parts[1] }}" width="530" height="530" loading="lazy">
             </div>
@@ -340,7 +342,7 @@
     <div class="dp-pg-container">
       <div class="dp-pg-section-label">Kategorie 03</div>
       <div class="dp-pg-section-head"><h2>Augen</h2><span class="dp-pg-count">11 Stile</span></div>
-      <p class="dp-pg-section-desc">Verleihe deinem Flexi Ausdruck mit einem von elf Augenstilen.</p>
+      <p class="dp-pg-section-desc">Verleihe deinem Flexi Ausdruck.</p>
       <div class="dp-pg-grid">
         {% assign dp_items = 'base,Basis|big,Groß|black,Schwarz|color,Farbe|cute,Süß|heart,Herz|long,Lang|reptile,Reptil|sleep,Schlaf|smiley,Smiley|x,X' | split: '|' %}
         {% for item in dp_items %}
@@ -360,12 +362,12 @@
   <section class="dp-pg-section" id="dp-pg-ears">
     <div class="dp-pg-container">
       <div class="dp-pg-section-label">Kategorie 04</div>
-      <div class="dp-pg-section-head"><h2>Ohren</h2><span class="dp-pg-count">4 Stile</span></div>
+      <div class="dp-pg-section-head"><h2>Ohren</h2><span class="dp-pg-count">6 Stile</span></div>
       <div class="dp-pg-grid">
-        {% assign dp_items = 'cat,Katze|elephant,Elefant|mouse,Maus|pig,Schwein' | split: '|' %}
+        {% assign dp_items = 'big,Groß|cat,Katze|elephant,Elefant|folded,Gefaltet|mouse,Maus|pig,Schwein' | split: '|' %}
         {% for item in dp_items %}
           {% assign parts = item | split: ',' %}
-          <div class="dp-pg-card">
+          <div class="dp-pg-card{% if parts[0] == 'big' or parts[0] == 'folded' %} dp-pg-new{% endif %}">
             <div class="dp-pg-card-img">
               <img src="{{ dp_pg_site_base }}/images/parts/ears/{{ parts[0] }}.png" alt="{{ parts[1] }}" width="530" height="530" loading="lazy">
             </div>
@@ -380,12 +382,12 @@
   <section class="dp-pg-section" id="dp-pg-hats">
     <div class="dp-pg-container">
       <div class="dp-pg-section-label">Kategorie 05</div>
-      <div class="dp-pg-section-head"><h2>Hüte</h2><span class="dp-pg-count">2 Stile</span></div>
+      <div class="dp-pg-section-head"><h2>Hüte</h2><span class="dp-pg-count">7 Stile</span></div>
       <div class="dp-pg-grid">
-        {% assign dp_items = 'cowboy,Cowboy|detective,Detektiv' | split: '|' %}
+        {% assign dp_items = 'cowboy-hat,Cowboy|crown,Krone|detective-hat,Detektiv|party-hat,Partyhut|police-hat.locked,Polizeimütze|sailor-hat,Matrosenmütze|traffic-cone,Verkehrskegel' | split: '|' %}
         {% for item in dp_items %}
           {% assign parts = item | split: ',' %}
-          <div class="dp-pg-card">
+          <div class="dp-pg-card{% if parts[0] == 'party-hat' or parts[0] == 'police-hat' or parts[0] == 'police-hat.locked' or parts[0] == 'sailor-hat' or parts[0] == 'traffic-cone' %} dp-pg-new{% endif %}">
             <div class="dp-pg-card-img">
               <img src="{{ dp_pg_site_base }}/images/parts/hats/{{ parts[0] }}.png" alt="{{ parts[1] }}" width="530" height="530" loading="lazy">
             </div>
@@ -402,7 +404,7 @@
       <div class="dp-pg-section-label">Kategorie 06</div>
       <div class="dp-pg-section-head"><h2>Körpersegmente</h2><span class="dp-pg-count">4 Stile</span></div>
       <div class="dp-pg-grid">
-        {% assign dp_items = 'base,Basis|base-small,Basis Klein|fur,Fell|flex,Flex' | split: '|' %}
+        {% assign dp_items = 'base,Basis|base-small,Basis Klein|flex,Flex|fur,Fell' | split: '|' %}
         {% for item in dp_items %}
           {% assign parts = item | split: ',' %}
           <div class="dp-pg-card">
@@ -456,16 +458,36 @@
     </div>
   </section>
 
-  <!-- ══════════════════ 09 FLEXI-SCHWÄNZE ══════════════════ -->
-  <section class="dp-pg-section" id="dp-pg-flexi-tails">
+  <!-- ══════════════════ 09 WINGS ══════════════════ -->
+  <section class="dp-pg-section" id="dp-pg-wings">
     <div class="dp-pg-container">
       <div class="dp-pg-section-label">Kategorie 09</div>
-      <div class="dp-pg-section-head"><h2>Flexi-Schwänze</h2><span class="dp-pg-count">3 Stile</span></div>
+      <div class="dp-pg-section-head"><h2>Wings</h2><span class="dp-pg-count">5 Stile</span></div>
       <div class="dp-pg-grid">
-        {% assign dp_items = 'feathered,Gefiedert|dragon,Drache|dino,Dino' | split: '|' %}
+        {% assign dp_items = 'angel-wings,Engelsflügel|double,Doppelt|feathers,Federn|love-feathers,Herzfedern|standard,Standard' | split: '|' %}
         {% for item in dp_items %}
           {% assign parts = item | split: ',' %}
-          <div class="dp-pg-card">
+          <div class="dp-pg-card{% if parts[0] == 'angel-wings' or parts[0] == 'double' or parts[0] == 'feathers' or parts[0] == 'love-feathers' or parts[0] == 'standard' %} dp-pg-new{% endif %}">
+            <div class="dp-pg-card-img">
+              <img src="{{ dp_pg_site_base }}/images/parts/wings/{{ parts[0] }}.png" alt="{{ parts[1] }}" width="530" height="530" loading="lazy">
+            </div>
+            <div class="dp-pg-card-label">{{ parts[1] }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ 10 FLEXI-SCHWÄNZE ══════════════════ -->
+  <section class="dp-pg-section" id="dp-pg-flexi-tails">
+    <div class="dp-pg-container">
+      <div class="dp-pg-section-label">Kategorie 10</div>
+      <div class="dp-pg-section-head"><h2>Flexi-Schwänze</h2><span class="dp-pg-count">5 Stile</span></div>
+      <div class="dp-pg-grid">
+        {% assign dp_items = 'dino,Dino|dolphin,Delfin|dragon,Drache|feathered,Gefiedert|pointed,Spitz' | split: '|' %}
+        {% for item in dp_items %}
+          {% assign parts = item | split: ',' %}
+          <div class="dp-pg-card{% if parts[0] == 'dolphin' or parts[0] == 'pointed' %} dp-pg-new{% endif %}">
             <div class="dp-pg-card-img">
               <img src="{{ dp_pg_site_base }}/images/parts/flexi-tails/{{ parts[0] }}.png" alt="{{ parts[1] }}" width="530" height="530" loading="lazy">
             </div>
@@ -476,21 +498,19 @@
     </div>
   </section>
 
-  <!-- ══════════════════ 10 BEINE ══════════════════ -->
+  <!-- ══════════════════ 11 BEINE ══════════════════ -->
   <section class="dp-pg-section" id="dp-pg-legs">
     <div class="dp-pg-container">
-      <div class="dp-pg-section-label">Kategorie 10</div>
-      <div class="dp-pg-section-head"><h2>Beine</h2><span class="dp-pg-count">12 Stile</span></div>
+      <div class="dp-pg-section-label">Kategorie 11</div>
+      <div class="dp-pg-section-head"><h2>Beine</h2><span class="dp-pg-count">16 Stile</span></div>
       <div class="dp-pg-notes">
         <span class="dp-pg-note">Beine werden, sofern verfügbar, angezeigt</span>
-        <span class="dp-pg-note">Gleiche Beine können je nach Segment unterschiedlich aussehen</span>
-        <span class="dp-pg-note">Beine nur am Kopfsegment bei Schneckenkopf</span>
       </div>
       <div class="dp-pg-grid">
-        {% assign dp_items = 'bee,Biene|bird,Vogel|cat,Katze|caterpillar,Raupe|duck,Ente|dino,Dino|dragon,Drache|elephant,Elefant|generic,Generisch|pig,Schwein|small,Klein|raptor,Raptor' | split: '|' %}
+        {% assign dp_items = 'bee,Biene|bird-legs,Vogelbeine|bird-wings,Vogelflügel|caterpillar,Raupe|cute,Süß|dino,Dino|fins,Flossen|dragon,Drache|duck,Ente|elephant,Elefant|generic,Generisch|pig,Schwein|raptor,Raptor|small,Klein|sploot,Sploot|tiny-toes,Kleine Zehen' | split: '|' %}
         {% for item in dp_items %}
           {% assign parts = item | split: ',' %}
-          <div class="dp-pg-card">
+          <div class="dp-pg-card{% if parts[0] == 'bird-legs' or parts[0] == 'bird-wings' or parts[0] == 'fins' or parts[0] == 'sploot' or parts[0] == 'tiny-toes' %} dp-pg-new{% endif %}">
             <div class="dp-pg-card-img">
               <img src="{{ dp_pg_site_base }}/images/parts/legs/{{ parts[0] }}.png" alt="{{ parts[1] }}" width="530" height="530" loading="lazy">
             </div>
@@ -501,16 +521,16 @@
     </div>
   </section>
 
-  <!-- ══════════════════ 11 SCHWÄNZE ══════════════════ -->
+  <!-- ══════════════════ 12 SCHWÄNZE ══════════════════ -->
   <section class="dp-pg-section" id="dp-pg-tails">
     <div class="dp-pg-container">
-      <div class="dp-pg-section-label">Kategorie 11</div>
-      <div class="dp-pg-section-head"><h2>Schwänze</h2><span class="dp-pg-count">8 Stile</span></div>
+      <div class="dp-pg-section-label">Kategorie 12</div>
+      <div class="dp-pg-section-head"><h2>Schwänze</h2><span class="dp-pg-count">9 Stile</span></div>
       <div class="dp-pg-grid">
-        {% assign dp_items = 'bird,Vogel|cat,Katze|duck,Ente|tufted,Gebüschelt|mouse,Maus|pig,Schwein|sting,Stachel|dino,Dino' | split: '|' %}
+        {% assign dp_items = 'bird,Vogel|cat,Katze|curly,Lockig|dino,Dino|duck,Ente|mouse,Maus|round,Rund|sting,Stachel|tufted,Gebüschelt' | split: '|' %}
         {% for item in dp_items %}
           {% assign parts = item | split: ',' %}
-          <div class="dp-pg-card">
+          <div class="dp-pg-card{% if parts[0] == 'curly' %} dp-pg-new{% endif %}">
             <div class="dp-pg-card-img">
               <img src="{{ dp_pg_site_base }}/images/parts/tails/{{ parts[0] }}.png" alt="{{ parts[1] }}" width="530" height="530" loading="lazy">
             </div>
@@ -521,17 +541,17 @@
     </div>
   </section>
 
-  <!-- ══════════════════ 12 ACCESSOIRES ══════════════════ -->
+  <!-- ══════════════════ 13 TOP-ACCESSOIRES ══════════════════ -->
   <section class="dp-pg-section" id="dp-pg-accessories">
     <div class="dp-pg-container">
-      <div class="dp-pg-section-label">Kategorie 12</div>
-      <div class="dp-pg-section-head"><h2>Accessoires</h2><span class="dp-pg-count">17 Stile</span></div>
+      <div class="dp-pg-section-label">Kategorie 13</div>
+      <div class="dp-pg-section-head"><h2>Top-Accessoires</h2><span class="dp-pg-count">19 Stile</span></div>
       <p class="dp-pg-section-desc">Accessoires werden, sofern verfügbar, angezeigt.</p>
       <div class="dp-pg-grid">
-        {% assign dp_items = 'apple,Apfel|bird,Vogel|bow,Schleife|bunny-ears,Hasenohren|clover,Klee|crest,Kamm|crown,Krone|egg,Ei|flower,Blume|heart,Herz|paw,Pfote|shell,Muschel|spike,Spike|spines,Stacheln|sprout,Spross|star,Stern|strawberry,Erdbeere' | split: '|' %}
+        {% assign dp_items = 'apple,Apfel|bird,Vogel|bow,Schleife|clover,Klee|crest,Kamm|dragon-spikes,Drachenspitzen|egg,Ei|fin,Flosse|flower,Blume|heart,Herz|lifebuoy,Rettungsring|paw,Pfote|shell,Muschel|spike,Spike|spines,Stacheln|sprout,Spross|star,Stern|strawberry,Erdbeere|wavy-fin,Wellige Flosse' | split: '|' %}
         {% for item in dp_items %}
           {% assign parts = item | split: ',' %}
-          <div class="dp-pg-card">
+          <div class="dp-pg-card{% if parts[0] == 'dragon-spikes' or parts[0] == 'fin' or parts[0] == 'lifebuoy' or parts[0] == 'wavy-fin' %} dp-pg-new{% endif %}">
             <div class="dp-pg-card-img">
               <img src="{{ dp_pg_site_base }}/images/parts/accessories/{{ parts[0] }}.png" alt="{{ parts[1] }}" width="530" height="530" loading="lazy">
             </div>
@@ -542,51 +562,62 @@
     </div>
   </section>
 
-  <!-- ══════════════════ 13 SYMBOLE ══════════════════ -->
+  <!-- ══════════════════ 15 SYMBOLE ══════════════════ -->
   <section class="dp-pg-section" id="dp-pg-symbols">
     <div class="dp-pg-container">
-      <div class="dp-pg-section-label">Kategorie 13</div>
+      <div class="dp-pg-section-label">Kategorie 15</div>
       <div class="dp-pg-section-head"><h2>Symbole</h2></div>
-      <p class="dp-pg-section-desc">Symbole werden, sofern verfügbar, angezeigt.</p>
-      <div style="margin-bottom:1.25rem">
-        <img
-          src="{{ dp_pg_site_base }}/images/parts/symbols/alphabet.png"
-          alt="Alphabet-Vorschau"
-          width="480" height="480"
-          style="height:72px;object-fit:contain;border-radius:6px;border:1px solid var(--dp-pg-border)"
-        >
-      </div>
+      <p class="dp-pg-section-desc">Buchstaben, Zahlen und Sonderzeichen für individuelle Beschriftungen.</p>
       <div class="dp-pg-symbols">
         <div class="dp-pg-symbol-group">
           <h3>Buchstaben</h3>
-          <p>a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+          <p>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>Ä Å Æ Ñ Ö Ø Ü</p>
         </div>
         <div class="dp-pg-symbol-group">
           <h3>Zahlen</h3>
           <p>0 1 2 3 4 5 6 7 8 9</p>
         </div>
         <div class="dp-pg-symbol-group">
-          <h3>Sonstige</h3>
-          <p>&amp; @ ! + ?</p>
+          <h3>Sonderzeichen</h3>
+          <p>&amp; @ ! + ? -</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════ 14 DETAILS ══════════════════ -->
-  <section class="dp-pg-section" id="dp-pg-details">
+  <!-- ══════════════════ 14 SIDE-ACCESSOIRES ══════════════════ -->
+  <section class="dp-pg-section" id="dp-pg-side-accessories">
     <div class="dp-pg-container">
       <div class="dp-pg-section-label">Kategorie 14</div>
-      <div class="dp-pg-section-head"><h2>Details</h2><span class="dp-pg-count">9 Stile</span></div>
-      <div class="dp-pg-notes">
-        <span class="dp-pg-note">Details werden, sofern verfügbar, angezeigt</span>
-        <span class="dp-pg-note">Mehrere Details können gleichzeitig kombiniert werden</span>
-      </div>
+      <div class="dp-pg-section-head"><h2>Side-Accessoires</h2><span class="dp-pg-count">2 Stile</span></div>
       <div class="dp-pg-grid">
-        {% assign dp_items = 'angry-eyelids,Wütende Lider|cheeks,Wangen|scales-top,Schuppen Oben|scales-side,Schuppen Seite|eyelashes,Wimpern|furry-cheeks,Pelzwangen|moustache,Schnurrbart|pois,Punkte|stripes,Streifen' | split: '|' %}
+        {% assign dp_items = 'axolotl-gills,Axolotl-Kiemen|dragon-spikes,Drachenspitzen' | split: '|' %}
         {% for item in dp_items %}
           {% assign parts = item | split: ',' %}
-          <div class="dp-pg-card">
+          <div class="dp-pg-card{% if parts[0] == 'axolotl-gills' %} dp-pg-new{% endif %}">
+            <div class="dp-pg-card-img">
+              <img src="{{ dp_pg_site_base }}/images/parts/side-accessories/{{ parts[0] }}.png" alt="{{ parts[1] }}" width="530" height="530" loading="lazy">
+            </div>
+            <div class="dp-pg-card-label">{{ parts[1] }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ 15 DETAILS ══════════════════ -->
+  <section class="dp-pg-section" id="dp-pg-details">
+    <div class="dp-pg-container">
+      <div class="dp-pg-section-label">Kategorie 15</div>
+      <div class="dp-pg-section-head"><h2>Details</h2><span class="dp-pg-count">13 Stile</span></div>
+      <div class="dp-pg-notes">
+        <span class="dp-pg-note">Details werden, sofern verfügbar, angezeigt</span>
+      </div>
+      <div class="dp-pg-grid">
+        {% assign dp_items = 'angry-eyelids,Wütende Lider|blaze,Blesse|cheeks,Wangen|eyebrows,Augenbrauen|eyelashes,Wimpern|furry-cheeks,Pelzwangen|moustache,Schnurrbart|piercing,Piercing|pois,Punkte|spots,Flecken|stripes,Streifen|tongue,Zunge|x-butt-mark,X-Po-Marke' | split: '|' %}
+        {% for item in dp_items %}
+          {% assign parts = item | split: ',' %}
+          <div class="dp-pg-card{% if parts[0] == 'blaze' or parts[0] == 'eyebrows' or parts[0] == 'piercing' or parts[0] == 'spots' or parts[0] == 'tongue' or parts[0] == 'x-butt-mark' %} dp-pg-new{% endif %}">
             <div class="dp-pg-card-img">
               <img src="{{ dp_pg_site_base }}/images/parts/details/{{ parts[0] }}.png" alt="{{ parts[1] }}" width="530" height="530" loading="lazy">
             </div>
@@ -597,14 +628,14 @@
     </div>
   </section>
 
-  <!-- ══════════════════ 15 HÖRNER ══════════════════ -->
+  <!-- ══════════════════ 16 HÖRNER ══════════════════ -->
   <section class="dp-pg-section" id="dp-pg-horns">
     <div class="dp-pg-container">
-      <div class="dp-pg-section-label">Kategorie 15</div>
+      <div class="dp-pg-section-label">Kategorie 16</div>
       <div class="dp-pg-section-head"><h2>Hörner</h2><span class="dp-pg-count">6 Stile</span></div>
-      <p class="dp-pg-section-desc">Kröne deinen Flexi mit Hörnern, Antennen oder einem Einhornhorn. Bestimmte Hörner können gleichzeitig gewählt werden.</p>
+      <p class="dp-pg-section-desc">Kröne deinen Flexi mit Hörnern, Antennen oder einem Einhornhorn.</p>
       <div class="dp-pg-grid">
-        {% assign dp_items = 'antennae,Antennen|dragon,Drache|tusk,Stoßzahn|reindeer,Rentier|spiky,Stachelig|unicorn,Einhorn' | split: '|' %}
+        {% assign dp_items = 'antennae,Antennen|dragon,Drache|reindeer,Rentier|spiky,Stachelig|tusk,Stoßzahn|unicorn,Einhorn' | split: '|' %}
         {% for item in dp_items %}
           {% assign parts = item | split: ',' %}
           <div class="dp-pg-card">
@@ -617,10 +648,10 @@
       </div>
     </div>
   </section>
-  <!-- ══════════════════ 16 FARBEN ÄNDERN ══════════════════ -->
+  <!-- ══════════════════ 18 FARBEN ÄNDERN ══════════════════ -->
   <section class="dp-pg-section" id="dp-pg-colors">
     <div class="dp-pg-container">
-      <div class="dp-pg-section-label">Kategorie 16</div>
+      <div class="dp-pg-section-label">Kategorie 18</div>
       <div class="dp-pg-section-head"><h2>Farben ändern</h2></div>
       <p class="dp-pg-section-desc">Cute Flexi Maker lässt dich die Farbe jedes Elements anpassen — so sieht deine Kreation genau so aus, wie du es dir vorstellst.</p>
       <div class="dp-pg-tutorial">
@@ -640,10 +671,10 @@
       </div>
     </div>
   </section>
-  <!-- ══════════════════ 17 TEILE DEAKTIVIEREN ══════════════════ -->
+  <!-- ══════════════════ 19 TEILE DEAKTIVIEREN ══════════════════ -->
   <section class="dp-pg-section" id="dp-pg-disable">
     <div class="dp-pg-container">
-      <div class="dp-pg-section-label">Kategorie 17</div>
+      <div class="dp-pg-section-label">Kategorie 19</div>
       <div class="dp-pg-section-head"><h2>Teile deaktivieren</h2></div>
       <p class="dp-pg-section-desc">Bestimmte Elemente können deaktiviert werden, um die kleinsten Details zu verfeinern. Wenn eine Komponente deaktiviert werden kann, erscheint ein Schalter im Farbmenü.</p>
       <div class="dp-pg-disable-grid">
@@ -674,9 +705,9 @@
   <div class="dp-pg-container">
     <div class="dp-pg-cta">
       <h2>Druckfertige Version herunterladen</h2>
-      <p>Alle Teile auf 10 Seiten — jederzeit griffbereit, auch offline.</p>
+      <p>Alle Teile auf 21 Seiten — jederzeit griffbereit, auch offline.</p>
       <a href="{{ dp_pg_pdf_url }}" class="dp-pg-btn dp-pg-btn-primary" style="font-size:1rem;padding:12px 28px" download>
-        ↓ PDF herunterladen (10 Seiten)
+        ↓ PDF herunterladen (21 Seiten)
       </a>
     </div>
   </div>

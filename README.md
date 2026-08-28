@@ -5,14 +5,14 @@ Static HTML version of the **Cute Flexi Maker Parts Guide**. The current catalog
 ## Current status
 
 - `index.html` contains the v2.1 catalog with the newer animals, heads, ears, hats, wings, flexi tails, legs, accessories and details.
-- The v2.1 HTML currently loads the new part images from `printfarm.tools`. This keeps the repository small, but GitHub Pages depends on that external image source.
-- For a fully independent deployment, mirror the referenced PNG files into `images/parts/` and change the `asset()` function in `index.html` to use local paths.
+- All v2.1 part images are mirrored locally below `images/parts/`; GitHub Pages no longer depends on the original image host.
+- `index.html`, `page.parts-guide.liquid` and `generate_parts_guide.py` use the same curated v2.1 catalog, including the new animals, Flexi parts and accessories.
 - `page.parts-guide.liquid` is the Shopify template version. Upload it as `templates/page.part-guide.liquid` and preview it in an unpublished theme before publishing.
 
 ## Source
 
 - **Original Canva design:** https://www.canva.com/design/DAHJlJ4ogjQ/CtqKAKkoXrEFH0-BXr3lww/edit
-- **PDF export:** [`parts-guide.pdf`](parts-guide.pdf) (in this repo)
+- **PDF export v2.1:** [`parts-guide-v2.1.pdf`](parts-guide-v2.1.pdf) (21 pages, in this repo)
 
 ## Live preview
 
@@ -61,7 +61,7 @@ cfm-parts-guide/
 ## What was rebuilt
 
 - **HTML/CSS chrome** — sticky header, hero, table of contents, sections, CTA, footer, back-to-top button, zoom-on-click for figures — all hand-written semantic HTML.
-- **Sections 1–13 (pages 2–6)** are real CSS grids of individual `<img>` cards. Each part is its own transparent PNG, extracted from the PDF and renamed by part (`images/parts/<section>/<slug>.png`). 93 part images in total.
+- **Sections 1–16 (pages 2–9)** are real CSS grids of individual `<img>` cards. Each catalog part is its own transparent PNG, extracted from the PDF/source and renamed by part (`images/parts/<section>/<slug>.png`).
 - **Symbols** section is a hybrid: the dice preview image plus the full A–Z, 0–9 and `& @ ! + ?` character set as real HTML text so it's selectable and searchable.
 - **Details & Horns (page 7)** uses the original page composite. The PDF only has 11 unique rasters there because details (eyelids, cheeks, eyelashes, etc.) overlay on a shared base body — reconstructing each combo would need vector layout data we don't have.
 - **Changing Colors / Disable Parts (page 8)** is fully rebuilt as HTML (numbered steps + two-column disable list) so text is selectable and searchable.
@@ -78,15 +78,15 @@ python3 scripts/extract_parts.py
 
 The script keeps a `manifest.json` you can use to drive further work — for example, swapping label rendering, adding tags, or generating filter UI.
 
-## Making the image source independent
+## Local image assets
 
-The v2.1 build currently distinguishes between existing images and newly added release images, all served from `printfarm.tools`. To make GitHub Pages independent, download every image referenced by the v2.1 data array, preserve the category and filename structure below `images/parts/`, then replace the `asset()` function in `index.html` with:
+The v2.1 image set is already mirrored and used by both the static HTML and the generated Liquid template. To verify that every catalog entry has a local file:
 
-```js
-const asset = (section, name) => `images/parts/${section}/${name}.png`;
+```sh
+python3 generate_parts_guide.py
 ```
 
-Afterward run `python3 -m http.server 8000` locally and check the browser network panel for missing images.
+The generator prints a drift report and writes `page.parts-guide.liquid`. Run `python3 -m http.server 8000` locally to check the browser for missing images.
 
 ## Deploying to GitHub Pages
 
